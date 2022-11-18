@@ -14,7 +14,7 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="index.php">
-                    <img src="../Ester_Pansitan/logo.png" alt=""> Garcia's Panciteria</a>
+                    <img src="../Ester_Pansitan/logo.png" alt=""> Ester Pansitan</a>
 
         <!--hamburger-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
