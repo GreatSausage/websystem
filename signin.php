@@ -20,10 +20,10 @@
         <form autocomplete="off"> 
             <h2>SIGN IN</h2> 
             <div class="inputBox"> 
-                <input type="text" required> <span>Username</span> <i></i> 
+                <input type="text" name="username"required> <span>Username</span> <i></i> 
             </div> 
             <div class="inputBox"> 
-                <input type="password" required> <span>Password</span> <i></i> 
+                <input type="password" name="password" required> <span>Password</span> <i></i> 
             </div> 
             <div class="links"> <a href="signup.php">Don't have an account? Sign Up Now</a> 
             </div> 

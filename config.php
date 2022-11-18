@@ -1,4 +1,3 @@
 <?php 
-   session_start();
-    $conn = mysqli_connect("localhost", "root", "", "shop_db");
+    $conn = mysqli_connect('localhost', 'root', '', 'user_db');
 ?>

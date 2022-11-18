@@ -93,6 +93,7 @@ h2 {
 }
 
 .inputBox input {
+    text-transform: none;
     position: relative;
     width: 100%;
     padding: 10px 10px 10px;
