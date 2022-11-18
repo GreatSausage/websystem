@@ -27,7 +27,11 @@
                 </div>
                 <div class="inputBox"> 
                     <input type="password" name="password" required> <span>Password</span> <i></i> 
-                </div>   
+                </div>
+                <div class="inputBox"> 
+                    <input type="password" name="confirmpassword" required> <span>Confirm Password</span> <i></i> 
+                </div>
+                
                 <input type="submit" value="Sign Up">
             </form> 
         </div>
