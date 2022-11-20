@@ -39,7 +39,6 @@
 
     <!--main-->
     <div class="content">
-            <h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWelcome to <br>Garcia's Panciteria!</h3>
         </div>
         <div class="box"> 
             <form action="signin.php" method="POST" autocomplete="off"> 
