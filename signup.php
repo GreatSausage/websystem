@@ -1,34 +1,28 @@
-<?php
-    include 'config.php';
-
+<?php 
+    require 'config.php';
+    
     if(isset($_POST["submit"])){
-        $username = mysqli_real_escape_string($conn, $_POST['name']);
-        $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $password = md5($_POST['pass']);
-        $confirmpassword = md5($_POST['confirmpassword']);
-        
-        $select = "SELECT * FROM user_db WHERE email='$email' && pass='pass'";
-
-        $result = mysqli_query($conn, $select);
-
-        if(mysqli_num_rows($result) > 0){
-            echo "<script> alert ('Email has already taken');</script>";
+        $username = $_POST["name"];
+        $email = $_POST["email"];
+        $password = $_POST["pass"];
+        $confirmpassword = $_POST["confirmpassword"];
+        $duplicate = mysqli_query($conn, "SELECT * FROM user_db WHERE email = '$email'");
+        if(mysqli_num_rows($duplicate) > 0){
+            echo
+            "<script> alert('Username or Email Has Already Taken');</script>";
         }
         else{
-            if($password != $confirmpassword){
-                $insert = "INSERT INTO user_db(username, email, pass) VALUES('$username','$email','$password')";
-                mysqli_query($conn,$insert);
-                echo "<script>alert('Signed Up Successfully');</script>";
-                header('location:signin.php');
+            if($pass = $confirmpassword){
+                $query = "INSERT INTO user_form Values('','$name','$email','$pass')";
+                mysqli_query($conn,$query);
+                echo "<script> alert('Registration Successfully'); </script>";
             }
             else{
-                echo "<script>alert('Password does not match');</script>";
+                echo "<script> alert('Password Does Not Match'); </script>";
             }
         }
-    }
+    }   
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,16 +45,16 @@
             <form action="signin.php" method="POST" autocomplete="off"> 
                 <h2>SIGN UP</h2> 
                 <div class="inputBox"> 
-                    <input type="text" name="username" required> <span>Username</span> <i></i> 
+                    <input type="text" name="name" id="username" required> <span>Username</span> <i></i> 
                 </div> 
                 <div class="inputBox"> 
-                    <input type="text" name="email" required> <span>Email</span> <i></i> 
+                    <input type="text" name="email" id="email" required> <span>Email</span> <i></i> 
                 </div>
                 <div class="inputBox"> 
-                    <input type="password" name="pass" required> <span>Password</span> <i></i> 
+                    <input type="password" name="pass" id="password" required> <span>Password</span> <i></i> 
                 </div>
                 <div class="inputBox"> 
-                    <input type="password" name="confirmpassword" required> <span>Confirm Password</span> <i></i> 
+                    <input type="password" name="confirmpassword" id="confirmpassword" required> <span>Confirm Password</span> <i></i> 
                 </div>
                 
                 <input type="submit" value="Sign Up">

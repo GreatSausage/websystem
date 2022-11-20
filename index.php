@@ -10,5 +10,18 @@
 <body>
     <!--header-->
     <?php include "header.php"; ?>
+
+    <!--main-->
+    <main>
+        <div class = "content">
+            <h3>Welcome to <br>Garcia's Panciteria</h3>
+            <div class="underline"></div>
+            <p>The home of mouth watering pancit</p>
+        </div>
+        <div class = "img">
+        </div>
+            
+    </main>
+
 </body>
 </html>
