@@ -10,38 +10,49 @@
 }
 
 .content{
-    margin: 13% 50px;
+    margin: 10% 50px;
     max-width: 50%;
 }
 
 .content .underline{
     height: 3px;
     background-color: var(--white);
-    width: 92%;
+    width: 86%;
+    margin-left: 5%;
 }
 
 .content p{
     color: var(--white);
     text-transform: none;
-    font-size: 1.5em;
+    font-size: 2em;
     font-style: italic;
     letter-spacing: 1px;
-    padding-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 15px;
+    margin-left: 5%;
 }
 
 .content h3{
     color: var(--white);
     text-transform: none;
-    font-size: 4.3em;
+    padding-left: 5%;
+    font-size: 3.5em;
     font-weight: bolder;
     text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
-.img{
-    
-    margin-top: 500px;
-    background: url(menu.jpg);
-    background-size: 500px 500px;
-    background-repeat: no-repeat;
+.content .button{
+    background-color: var(--header-right);
+    border: none;
+    margin-top: 15px;
+    padding: 15px 32px;
+    margin-left: 5%;
+    color: var(--font-color-2);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5em;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, var(--header-right), var(--font-color-1));
 }
-
