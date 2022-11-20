@@ -13,12 +13,15 @@
 
     <!--main-->
     <main>
+        <!--upperpart of homepage-->
         <div class = "content">
             <h3>Welcome to <br>Garcia's Panciteria</h3>
             <div class="underline"></div>
             <p>The home of mouth watering pancit</p>
         </div>
+        <!--menu content-->
         <div class = "img">
+            <h3>Lorem ipsum dolor sit.</h3>
         </div>
             
     </main>

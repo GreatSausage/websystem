@@ -22,7 +22,6 @@
 body{
     min-height: 100vh;
     background:url(../Ester_Pansitan/pansit.jpg) no-repeat;
-    background-size: cover;
     background-position: center;
 }
 

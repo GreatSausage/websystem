@@ -35,4 +35,13 @@
     font-size: 4.3em;
     font-weight: bolder;
     text-transform: uppercase;
-}   
+}
+
+.img{
+    
+    margin-top: 500px;
+    background: url(menu.jpg);
+    background-size: 500px 500px;
+    background-repeat: no-repeat;
+}
+
