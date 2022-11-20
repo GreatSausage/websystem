@@ -13,7 +13,6 @@
 
     <!--main-->
     <div class="content">
-        <h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWelcome to <br>Garcia's Panciteria!</h3>
     </div>
     <!--form-->
     <div class="box"> 
