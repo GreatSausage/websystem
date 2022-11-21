@@ -66,7 +66,7 @@
     <!--form-->
     <div class="box"> 
         <form class="" action="" method="post" autocomplete="off"> 
-            <h2>SIGN IN</h2> 
+            <h2>Log In Form</h2> 
             <div class="inputBox"> 
                 <input type="text" name="username" id="username" required value=""> <span>Username</span> <i></i> 
             </div> 
