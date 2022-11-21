@@ -2,9 +2,9 @@
     require 'config.php';
     
     if(isset($_POST["submit"])){
-        $username = $_POST["name"];
+        $name = $_POST["name"];
         $email = $_POST["email"];
-        $password = $_POST["pass"];
+        $password = $_POST["password"];
         $confirmpassword = $_POST["confirmpassword"];
         $duplicate = mysqli_query($conn, "SELECT * FROM user_db WHERE email = '$email'");
         if(mysqli_num_rows($duplicate) > 0){
@@ -12,8 +12,8 @@
             "<script> alert('Username or Email Has Already Taken');</script>";
         }
         else{
-            if($pass = $confirmpassword){
-                $query = "INSERT INTO user_form Values('','$name','$email','$pass')";
+            if($password = $confirmpassword){
+                $query = "INSERT INTO user_form Values('','$name','$email','$password')";
                 mysqli_query($conn,$query);
                 echo "<script> alert('Registration Successfully'); </script>";
             }
@@ -44,13 +44,13 @@
             <form action="signin.php" method="POST" autocomplete="off"> 
                 <h2>SIGN UP</h2> 
                 <div class="inputBox"> 
-                    <input type="text" name="name" id="username" required> <span>Username</span> <i></i> 
+                    <input type="text" name="name" id="name" required> <span>Username</span> <i></i> 
                 </div> 
                 <div class="inputBox"> 
                     <input type="text" name="email" id="email" required> <span>Email</span> <i></i> 
                 </div>
                 <div class="inputBox"> 
-                    <input type="password" name="pass" id="password" required> <span>Password</span> <i></i> 
+                    <input type="password" name="password" id="password" required> <span>Password</span> <i></i> 
                 </div>
                 <div class="inputBox"> 
                     <input type="password" name="confirmpassword" id="confirmpassword" required> <span>Confirm Password</span> <i></i> 

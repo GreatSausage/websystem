@@ -11,7 +11,7 @@
             echo $con->connect_error;
         }
         else{
-            return $con;
+            return $conn;
         }
     }
 ?>
