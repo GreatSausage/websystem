@@ -149,7 +149,7 @@ h2 {
     color: var(--font-color-2);
 }
 
-input[type="submit"]
+.submit-btn
 {
   border: none;
   outline: none;

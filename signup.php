@@ -1,30 +1,30 @@
 <?php 
     require 'config.php';
-    
     if(isset($_POST["submit"])){
-        $name = $_POST["name"];
+        $username = $_POST["username"];
         $email = $_POST["email"];
         $password = $_POST["password"];
         $confirmpassword = $_POST["confirmpassword"];
-        $duplicate = mysqli_query($conn, "SELECT * FROM user_db WHERE email = '$email'");
+        $duplicate = mysqli_query($conn, "SELECT * FROM user_form WHERE username = '$username' OR email = '$email'");
         if(mysqli_num_rows($duplicate) > 0){
             echo
             "<script> alert('Username or Email Has Already Taken');</script>";
         }
         else{
             if($password = $confirmpassword){
-                $query = "INSERT INTO user_form Values('','$name','$email','$password')";
+                $query = "INSERT INTO user_form Values('','$username','$email','$password')";
                 mysqli_query($conn,$query);
-                echo "<script> alert('Registration Successfully'); </script>";
+                header("Location: signin.php");
             }
             else{
-                echo "<script> alert('Password Does Not Match'); </script>";
+                echo
+                "<script> alert('Password Does Not Match'); </script>";
             }
         }
     }   
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,22 +41,23 @@
     <div class="content">
         </div>
         <div class="box"> 
-            <form action="signin.php" method="POST" autocomplete="off"> 
+            <form class="" action="" method="POST" autocomplete="off"> 
                 <h2>SIGN UP</h2> 
                 <div class="inputBox"> 
-                    <input type="text" name="name" id="name" required> <span>Username</span> <i></i> 
+                    <input type="text" name="username" id="username" required value=""> <span>Username</span> <i></i> 
                 </div> 
                 <div class="inputBox"> 
-                    <input type="text" name="email" id="email" required> <span>Email</span> <i></i> 
+                    <input type="text" name="email" id="email" required value=""> <span>Email</span> <i></i> 
                 </div>
                 <div class="inputBox"> 
-                    <input type="password" name="password" id="password" required> <span>Password</span> <i></i> 
+                    <input type="password" name="password" id="password" required value=""> <span>Password</span> <i></i> 
                 </div>
                 <div class="inputBox"> 
-                    <input type="password" name="confirmpassword" id="confirmpassword" required> <span>Confirm Password</span> <i></i> 
+                    <input type="password" name="confirmpassword" id="confirmpassword" required value=""> <span>Confirm Password</span> <i></i><br> 
                 </div>
-                
-                <input type="submit" value="Sign Up">
+                <div class="links"> <a href="signin.php">Already have an account? Sign In Now</a> 
+            </div>   
+                <button type="submit" name="submit" class='submit-btn'>Sign Up</button>
             </form> 
         </div>
 

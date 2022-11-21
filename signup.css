@@ -11,7 +11,7 @@
 {
     position: relative;
     width: 500px;
-    height: 470px;
+    height: 490px;
     background: var(--font-color-1);
     border-radius: 8px;
     overflow: hidden;
@@ -135,7 +135,24 @@ h2 {
     height: 44px;
 }
 
-input[type="submit"]{
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    text-transform: none;
+    margin: 25px 0;
+    font-size: 0.75em;
+    color: var(--font-color-2);
+    text-decoration: var(--font-color-2);
+}
+
+.links a:hover{
+    color: var(--font-color-2);
+}
+
+button[type="submit"]{
     border: none;
     outline: none;
     padding: 11px 25px;
@@ -144,6 +161,6 @@ input[type="submit"]{
     border-radius: 4px;
     font-weight: 600;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 10px;
     color: var(--white);
 }
