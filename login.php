@@ -73,7 +73,7 @@
             <div class="inputBox"> 
                 <input type="password" name="password" id="password" required value=""> <span>Password</span> <i></i> 
             </div> 
-            <div class="links"> <a href="signup.php">Don't have an account? Sign Up Now</a> 
+            <div class="links"> <a href="register.php">Don't have an account? Sign Up Now</a> 
             </div> 
             <button type="submit" name="submit" class="submit-btn">Sign In</button>
         </form> 
