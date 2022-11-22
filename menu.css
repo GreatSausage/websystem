@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
 :root{
     --header-left: #262525;
     --header-right: #5d3940;
@@ -7,76 +9,85 @@
     --white: #ccc9c9;
 }
 
-.main {
-    width: 1170px;
-    margin: 100px auto;
-  }
-  .section-title {
+*{
+    padding: 0; margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+body{
+    min-height: 100vh;
+    background:url(../project/background.jpg) no-repeat;
+    background-size:auto;
+    background-position: center;
+}
+
+/*header starts here*/
+
+/*navbar*/
+.container-fluid{
+    height: 81px;
+    box-shadow: -10px -10px 50px var(--font-color-1), 10px 10px 50px var(--header-right);
+    background-image: linear-gradient(to right, var(--font-color-1), var(--header-right));
+}
+
+/*logo*/
+.navbar-brand img{
+    padding-left: 50px;
+    width: 110px;
+    justify-content: space-around;
+}
+
+.container-fluid .navbar-brand{
+    color: var(--font-color-2);
+    font-weight: bolder;
+    font-size: 2.2em;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.container-fluid .navbar-brand:hover{
+    color: var(--font-color-2);
+}
+
+/*menu list*/
+.navbar-nav{
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    padding-right: 50px;
+}
+
+.navbar-nav .nav-item{
+    font-weight: bolder;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    padding-left: 40px;
+}
+
+.nav-item a{
+    color: var(--white);
+}
+
+.nav-item a:hover{
+    color: var(--font-color-1)
+}
+
+/*header ends here*/
+
+/*main starts here*/
+h3{
     text-align: center;
-    margin-bottom: 80px;
-  }
-  .section-title h2 {
-    text-transform: capitalize;
-    font-size: 35px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 7px;
     color: var(--white);
-  }
-
-  .menus {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  .menu-column {
-    width: 31%;
-  }
-  .menu-column h4 {
-    text-transform: capitalize;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    position: relative;
-    padding-bottom: 10px;
-    color: var(--white);
-  }
-
-  .single-menu {
-    display: flex;
-    align-items: center;
-    margin-top: 40px;
-  }
-
-  .single-menu p{
-    color: var(--white);
-  }
-  .single-menu img {
-    border-radius: 50%;
-    max-width: 110px;
-    border: 1px dashed #ddd;
-    padding: 3px;
-    margin-right: 15px;
-    transition: .3s;
-  }
-  .single-menu:hover img{
-      transform: rotate(360deg);
-  }
-  .single-menu .menu-content h5 {
-    text-transform: capitalize;
-    font-size: 22px;
-    font-weight: 500;
-    border-bottom: 1px dashed #222;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    color: var(--white);
-  }
-  .single-menu .menu-content h5 span {
-    color: tomato;
-    float: right;
-    font-weight: 600;
-    font-style: italic;
-  }
-    
-  
+    text-transform: uppercase;
+    padding-top: 5%;
+    font-size: 3em;
+}
+/*main ends here*/
