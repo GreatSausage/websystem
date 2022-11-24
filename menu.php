@@ -41,7 +41,23 @@
     </header>
 
     <main>
-        <h3> MENU PAGE </h3>
+        <div class="menu">
+            <div class="heading">
+                <h1>GARCIA'S PANCITERIA</h1>
+                <h3>&mdash; MENU &mdash; </h3>
+            </div><!--heading-->
+            <div class="food-items">
+                <img src="background.jpg">
+                <div class="details">
+                    <div class="details-sub">
+                        <h5>Lorem, ipsum.</h5>
+                        <h5 class="price">$10</h5>
+                    </div><!--details-sub-->
+                    <p>Lorem, ipsum dolor.</p>
+                    <button>Order Now</button>
+                </div><!--details-->
+            </div><!--fooditems-->
+        </div><!--menu-->
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
