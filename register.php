@@ -7,21 +7,17 @@
         $confirmpassword = $_POST["confirmpassword"];
         $duplicate = mysqli_query($conn, "SELECT * FROM user_form WHERE username = '$username' OR email = '$email'");
         if(mysqli_num_rows($duplicate) > 0){
-            echo
-            "<script> alert('Username or Email Has Already Taken');</script>";
+            echo "<script> alert('Username or Email has already taken');</script>";
+        }
+        if($password != $confirmpassword){
+            echo "<script> alert('Password do not match'); </script>";
         }
         else{
-            if($password = $confirmpassword){
-                $query = "INSERT INTO user_form Values('','$username','$email','$password')";
-                mysqli_query($conn,$query);
-                header("Location: login.php");
-            }
-            else{
-                echo
-                "<script> alert('Password Does Not Match'); </script>";
-            }
-        }
-    }   
+            $query = "INSERT INTO user_form Values('','$username','$email','$password')";
+            mysqli_query($conn,$query);
+            header("Location: login.php");
+        }            
+    }  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +35,7 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="index.php">
-                    <img src="../Ester_Pansitan/logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
+                    <img src="logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
 
         <!--hamburger-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,17 +54,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Logout</a>
-                    </li>
                 </ul>
             </div>       
     </header>
 
     <main>
     <!--form-->
-    <div class="content">
-        </div>
         <div class="box"> 
             <form class="" action="" method="POST" autocomplete="off"> 
                 <h2>Register Form</h2> 
