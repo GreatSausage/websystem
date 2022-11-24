@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="menu.css?v=<?php echo time(); ?>">
 </head>
-<body>
+<body>  
+    <!--header-->
     <header>
         <!--Navbar-->
             <div class="container-fluid">
@@ -40,23 +41,118 @@
             </div>       
     </header>
 
+    <!--main-->
     <main>
-        <div class="menu">
-            <div class="heading">
-                <h1>GARCIA'S PANCITERIA</h1>
-                <h3>&mdash; MENU &mdash; </h3>
-            </div><!--heading-->
-            <div class="food-items">
-                <img src="background.jpg">
-                <div class="details">
-                    <div class="details-sub">
-                        <h5>Lorem, ipsum.</h5>
-                        <h5 class="price">$10</h5>
-                    </div><!--details-sub-->
-                    <p>Lorem, ipsum dolor.</p>
-                    <button>Order Now</button>
-                </div><!--details-->
-            </div><!--fooditems-->
+        <div class="section-title">
+            <h1>Garcia's Panciteria</h1>
+            <h3>&mdash; MENU PAGE &mdash; </h3>
+        </div><!--section-title-->
+
+        <div class="menus">
+            <!--first column starts here-->
+            <div class="menu-column">
+                <h4>Bihon</h4>
+                <!--first row in first column-->
+                <div class="single-menu">
+                    <img src="https://via.placeholder.com/150C" alt="">
+                    <div class="menu-content">
+                        <h5>Small</h5>
+                        <h6><span> P300 / P400</span></h6><!--exact price-->
+                        <p>5 to 6 person.</p> <!--for how many person-->
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--menucontent-->
+                </div><!--singlemenu-->
+                <!--second row in first column-->
+                <div class="single-menu">
+                    <img src="https://via.placeholder.com/150C" alt="">
+                    <div class="menu-content">
+                        <h5>Medium</h5>
+                        <h6><span> P500 / P600</span></h6><!--exact price-->
+                        <p>10 to 12 person.</p> <!--for how many person-->
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--menucontent-->
+                </div><!--singlemenu-->
+                <!--third row in first column-->
+                <div class="single-menu">
+                    <img src="https://via.placeholder.com/150C" alt="">
+                    <div class="menu-content">
+                        <h5>Large</h5>
+                        <h6><span> P700 / P800</span></h6><!--exact price-->
+                        <p>13 to 15 person.</p> <!--for how many person-->
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--menucontent-->
+                </div><!--singlemenu-->
+            </div><!--menucolumn-->
+
+            <!--second column starts here-->
+            <div class="menu-column">
+                <h4>Miki</h4>
+                <!--first row in second column-->
+                <div class="single-menu">
+                    <img src="https://via.placeholder.com/150C" alt="">
+                    <div class="menu-content">
+                        <h5>Small</h5>
+                        <h6><span>P50</span></h6><!--exact price-->
+                        <p>Lorem ipsum dolor sit amet.</p> <!--for how many person-->
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--menucontent-->
+                </div><!--singlemenu-->
+                <!--second row in second column-->
+                <div class="single-menu">
+                    <img src="https://via.placeholder.com/150C" alt="">
+                    <div class="menu-content">
+                        <h5>Medium</h5>
+                        <h6><span>P50</span></h6><!--exact price-->
+                        <p>Lorem ipsum dolor sit amet.</p> <!--for how many person-->
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--menucontent-->
+                </div><!--singlemenu-->
+                <!--third row in second column-->
+                <div class="single-menu">
+                    <img src="https://via.placeholder.com/150C" alt="">
+                    <div class="menu-content">
+                        <h5>Large</h5>
+                        <h6><span>P50</span></h6><!--exact price-->
+                        <p>Lorem ipsum dolor sit amet.</p> <!--for how many person-->
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--menucontent-->
+                </div><!--singlemenu-->
+            </div><!--menucolumn-->
+
+            <!--third column starts here-->
+            <div class="menu-column">
+                <h4>Canton</h4>
+                <!--first row in third column-->
+                <div class="single-menu">
+                    <img src="https://via.placeholder.com/150C" alt="">
+                    <div class="menu-content">
+                        <h5>Small</h5>
+                        <h6><span>P50</span></h6><!--exact price-->
+                        <p>Lorem ipsum dolor sit amet.</p> <!--for how many person-->
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--menucontent-->
+                </div><!--singlemenu-->
+                <!--second row in third column-->
+                <div class="single-menu">
+                    <img src="https://via.placeholder.com/150C" alt="">
+                    <div class="menu-content">
+                        <h5>Medium</h5>
+                        <h6><span>P50</span></h6><!--exact price-->
+                        <p>Lorem ipsum dolor sit amet.</p> <!--for how many person-->
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--menucontent-->
+                </div><!--singlemenu-->
+                <!--third row in third column-->
+                <div class="single-menu">
+                    <img src="https://via.placeholder.com/150C" alt="">
+                    <div class="menu-content">
+                        <h5>Large</h5>
+                        <h6><span>P50</span></h6><!--exact price-->
+                        <p>Lorem ipsum dolor sit amet.</p> <!--for how many person-->
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--menucontent-->
+                </div><!--singlemenu-->
+            </div><!--menucolumn-->
         </div><!--menu-->
     </main>
 
