@@ -34,7 +34,7 @@
                         <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="logout.php">Logout</a>
+                        <a class="nav-link" href="logout.php" img src="power.png" alt=""></a>
                     </li>
                 </ul>
             </div>       

@@ -42,6 +42,12 @@ body{
     justify-content: space-around;
 }
 
+.nav-item img{
+    height: 2em;
+    width: 2em;
+    opacity: 1;
+}
+
 .container-fluid .navbar-brand{
     color: var(--font-color-2);
     font-weight: bolder;
