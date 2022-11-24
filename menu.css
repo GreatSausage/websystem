@@ -140,9 +140,8 @@ main {
 }
 
 .single-menu img {
-    border-radius: 50%;
-    max-width: 110px;
-    border: 1px dashed #ddd;
+    border-radius: 70%;
+    max-width: 120px;
     padding: 3px;
     margin-right: 15px;
 }
