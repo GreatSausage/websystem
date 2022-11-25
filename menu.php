@@ -34,9 +34,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">About</a>
                     </li>
+                    <!--
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php">Logout</a>
                     </li>
+                    -->
                 </ul>
             </div>       
     </header>
@@ -48,9 +50,9 @@
             <h3>&mdash; Menu Page &mdash;</h3>
         </div><!--section-title-->
         <div class="menu">
-            <div class="menu-column">
+            <div class="menu-column"><!--FIRST COLUMN STARTS-->
                 <h4>Small size</h4>
-                <div class="single-menu"><!--first row-->
+                <div class="single-menu"><!--SMALL BIHON-->
                     <img src="smallbihon.jpg" alt="">
                     <div class="content-menu">
                         <h5>Bihon</h5>
@@ -59,91 +61,90 @@
                         <a href="#" class="button">Order Now!</a>
                     </div><!--content-menu-->
                 </div><!--single-menu-->
-                <div class="single-menu"><!--second row-->
+                <div class="single-menu"><!--SMALL CANTON-->
                     <img src="smallcanton.jpg" alt="">
                     <div class="content-menu">
                         <h5>Canton</h5>
-                        <h6><span>P500 / P600</span></h6>
-                        <p>10 to 12 person</p>
-                        <a href="#" class="button">Order Now!</a>
-                    </div><!--content-menu-->
-                </div><!--single-menu-->
-                <div class="single-menu"><!--third row-->
-                    <img src="largebihon.jpg" alt="">
-                    <div class="content-menu">
-                        <h5>Miki</h5>
-                        <h6><span>P700 / P800</span></h6>
-                        <p>13 to 15 person</p>
-                        <a href="#" class="button">Order Now!</a>
-                    </div><!--content-menu-->
-                </div><!--single-menu-->
-                </div><!--third menu column-->
-            <div class="menu-column">
-                <h4>medium size</h4>
-                <div class="single-menu"><!--first row-->
-                    <img src="mediumbihon.jpg" alt="">
-                    <div class="content-menu">
-                        <h5>Bihon</h5>
                         <h6><span>P300 / P400</span></h6>
                         <p>5 to 6 person</p>
                         <a href="#" class="button">Order Now!</a>
-                    </div><!--content-menu-->
-                </div><!--single-menu-->
-                <div class="single-menu"><!--second row-->
+                    </div><!--CONTENT-MENU-->
+                </div><!--SINGLE-MENU-->
+                <div class="single-menu"><!--SMALL MIKI-->
+                    <img src="largebihon.jpg" alt=""><!--NO PICTURE FOR SMALL MIKI YET-->
+                    <div class="content-menu">
+                        <h5>Miki</h5>
+                        <h6><span>P300 / P400</span></h6>
+                        <p>5 to 6 person</p>
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--CONTENT-MENU-->
+                </div><!--SINGLE-MENU-->
+                </div><!--FIRST COLUMN ENDS-->
+
+            <div class="menu-column"><!--SECOND COLUMN STARTS-->
+                <h4>medium size</h4>
+                <div class="single-menu"><!--MEDIUM BIHON-->
+                    <img src="mediumbihon.jpg" alt="">
+                    <div class="content-menu">
+                        <h5>Bihon</h5>
+                        <h6><span>P500 / P600</span></h6>
+                        <p>10 to 12 person</p>
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--CONTENT-MENU-->
+                </div><!--SINGLE-MENU-->
+                <div class="single-menu"><!--MEDIUM CANTON-->
                     <img src="mediumcanton.jpg" alt="">
                     <div class="content-menu">
                         <h5>Canton</h5>
-                        <h6><span>P300 / P400</span></h6>
-                        <p>5 to 6 person</p>
+                        <h6><span>P500 / P600</span></h6>
+                        <p>10 to 12 person</p>>
                         <a href="#" class="button">Order Now!</a>
-                    </div><!--content-menu-->
-                </div><!--single-menu-->
-                <div class="single-menu"><!--first row-->
-                    <img src="largebihon.jpg" alt="">
+                    </div><!--CONTENT-MENU-->
+                </div><!--SINGLE-MENU-->
+                <div class="single-menu"><!--MEDIUM MIKI-->
+                    <img src="largebihon.jpg" alt=""><!--NO PICTURE FOR MEDIUM MIKI YET-->
                     <div class="content-menu">
-                        <h5>Bihon</h5>
-                        <h6><span>P300 / P400</span></h6>
-                        <p>5 to 6 person</p>
-                        <a href="#" class="button">Order Now!</a>
-                    </div><!--content-menu-->
-                </div><!--single-menu-->
-            </div><!--second menu column-->
-            <div class="menu-column">
-                <h4>large size</h4>
-                <div class="single-menu"><!--first row-->
-                    <img src="largebihon.jpg" alt="">
-                    <div class="content-menu">
-                        <h5>Bihon</h5>
-                        <h6><span>P300 / P400</span></h6>
-                        <p>5 to 6 person</p>
-                        <a href="#" class="button">Order Now!</a>
-                    </div><!--content-menu-->
-                </div><!--single-menu-->
-                <div class="single-menu"><!--first row-->
-                    <img src="largecanton.jpg" alt="">
-                    <div class="content-menu">
-                        <h5>Canton</h5>
-                        <h6><span>P300 / P400</span></h6>
-                        <p>5 to 6 person</p>
-                        <a href="#" class="button">Order Now!</a>
-                    </div><!--content-menu-->
-                </div><!--single-menu-->
-                
-                <div class="single-menu"><!--second row-->
-                    <img src="mediumbihon.jpg" alt="">
-                    <div class="content-menu">
-                        <h5>Bihon</h5>
+                        <h5>miki</h5>
                         <h6><span>P500 / P600</span></h6>
                         <p>10 to 12 person</p>
                         <a href="#" class="button">Order Now!</a>
-                    </div><!--content-menu-->
-                </div><!--single-menu-->
-            </div><!--third menu column-->
-            
+                    </div><!--CONTENT-MENU-->
+                </div><!--SINGLE-MENU-->
+            </div><!--SECOND MENU COLUMN-->
+
+            <div class="menu-column">
+                <h4>large size</h4>
+                <div class="single-menu"><!--LARGE BIHON-->
+                    <img src="largebihon.jpg" alt="">
+                    <div class="content-menu">
+                        <h5>Bihon</h5>
+                        <h6><span>P700 / P800</span></h6>
+                        <p>13 to 15 person</p>
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--CONTENT-MENU-->
+                </div><!--SINGLE-MENU-->
+                <div class="single-menu"><!--LARGE CANTON-->
+                    <img src="largecanton.jpg" alt="">
+                    <div class="content-menu">
+                        <h5>Canton</h5>
+                        <h6><span>P700 / P800</span></h6>
+                        <p>13 to 15 person</p>
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--CONTENT-MENU-->
+                </div><!--SINGLE-MENU-->
+                <div class="single-menu"><!--LARGE MIKI-->
+                    <img src="mediumbihon.jpg" alt=""><!--NO PICTURE FOR LARGE MIKI YET-->
+                    <div class="content-menu">
+                        <h5>miki</h5>
+                        <h6><span>P700 / P800</span></h6>
+                        <p>13 to 15 person</p>
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--CONTENT-MENU-->
+                </div><!--SINGLE-MENU-->
+            </div><!--THIRD MENU COLUMN-->
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
