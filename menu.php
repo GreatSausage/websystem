@@ -120,9 +120,9 @@
                     </div><!--content-menu-->
                 </div><!--single-menu-->
                 <div class="single-menu"><!--first row-->
-                    <img src="largebihon.jpg" alt="">
+                    <img src="largecanton.jpg" alt="">
                     <div class="content-menu">
-                        <h5>Bihon</h5>
+                        <h5>Canton</h5>
                         <h6><span>P300 / P400</span></h6>
                         <p>5 to 6 person</p>
                         <a href="#" class="button">Order Now!</a>
