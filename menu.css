@@ -152,6 +152,8 @@ main{
 
 .single-menu{
     display: flex;
+    align-items: center;
+    margin-top: 40px;
 }
 
 .single-menu img{

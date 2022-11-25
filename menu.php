@@ -49,8 +49,8 @@
         </div><!--section-title-->
         <div class="menu">
             <div class="menu-column">
-                <h4>Small</h4>
-                <div class="single-menu">
+                <h4>Small size</h4>
+                <div class="single-menu"><!--first row-->
                     <img src="smallbihon.jpg" alt="">
                     <div class="content-menu">
                         <h5>Bihon</h5>
@@ -59,8 +59,29 @@
                         <a href="#" class="button">Order Now!</a>
                     </div><!--content-menu-->
                 </div><!--single-menu-->
-                <div class="single-menu">
+                <div class="single-menu"><!--second row-->
                     <img src="mediumbihon.jpg" alt="">
+                    <div class="content-menu">
+                        <h5>Bihon</h5>
+                        <h6><span>P500 / P600</span></h6>
+                        <p>10 to 12 person</p>
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--content-menu-->
+                </div><!--single-menu-->
+                <div class="single-menu"><!--third row-->
+                    <img src="largebihon.jpg" alt="">
+                    <div class="content-menu">
+                        <h5>Bihon</h5>
+                        <h6><span>P700 / P800</span></h6>
+                        <p>13 to 15 person</p>
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--content-menu-->
+                </div><!--single-menu-->
+            </div><!--first menu column-->
+            <div class="menu-column">
+                <h4>large size</h4>
+                <div class="single-menu"><!--first row-->
+                    <img src="smallbihon.jpg" alt="">
                     <div class="content-menu">
                         <h5>Bihon</h5>
                         <h6><span>P300 / P400</span></h6>
@@ -68,7 +89,17 @@
                         <a href="#" class="button">Order Now!</a>
                     </div><!--content-menu-->
                 </div><!--single-menu-->
-            </div><!--first menu column-->
+                <div class="single-menu"><!--second row-->
+                    <img src="mediumbihon.jpg" alt="">
+                    <div class="content-menu">
+                        <h5>Bihon</h5>
+                        <h6><span>P500 / P600</span></h6>
+                        <p>10 to 12 person</p>
+                        <a href="#" class="button">Order Now!</a>
+                    </div><!--content-menu-->
+                </div><!--single-menu-->
+            </div><!--third menu column-->
+            
         </div>
     </main>
 
