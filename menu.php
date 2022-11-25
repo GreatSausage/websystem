@@ -71,7 +71,7 @@
                 <div class="single-menu"><!--third row-->
                     <img src="largebihon.jpg" alt="">
                     <div class="content-menu">
-                        <h5>Bihon</h5>
+                        <h5>Miki</h5>
                         <h6><span>P700 / P800</span></h6>
                         <p>13 to 15 person</p>
                         <a href="#" class="button">Order Now!</a>
@@ -89,10 +89,10 @@
                         <a href="#" class="button">Order Now!</a>
                     </div><!--content-menu-->
                 </div><!--single-menu-->
-                <div class="single-menu"><!--first row-->
-                    <img src="largebihon.jpg" alt="">
+                <div class="single-menu"><!--second row-->
+                    <img src="mediumcanton.jpg" alt="">
                     <div class="content-menu">
-                        <h5>Bihon</h5>
+                        <h5>Canton</h5>
                         <h6><span>P300 / P400</span></h6>
                         <p>5 to 6 person</p>
                         <a href="#" class="button">Order Now!</a>
