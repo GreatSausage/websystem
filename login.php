@@ -33,33 +33,16 @@
 </head>
 <body>
     <header>
-    <!--Navbar-->
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.php">
-                <img src="../Ester_Pansitan/logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
+        <!--Navbar-->
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.php">&nbsp&nbspWelcome to Garcia's Panciteria</a>
 
-    <!--hamburger-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-                    
-    <!--menulist-->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="menu.php" class="nav-link">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.php">About</a>
-                </li>
-            </ul>
-        </div>       
+        <!--hamburger-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
     </header>
-
     <main>
     <!--form-->
     <div class="box"> 
