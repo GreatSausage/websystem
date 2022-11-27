@@ -43,19 +43,12 @@ body{
 }
 
 .container-fluid .navbar-brand{
-    background: --webkit-linear-gradient(var(--font-color-2), var(--font-color-1));
-    --webkit-background-clip: text;
-    color: transparent;
+    color: var(--font-color-2);
     font-weight: bolder;
     font-size: 2.2em;
     padding-left: 10px;
     letter-spacing: 3px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-transform: uppercase;
-}
-
-.navbar-brand{
-    margin-left: 20%;
 }
 
 /*header ends here*/
