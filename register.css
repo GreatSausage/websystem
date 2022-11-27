@@ -44,28 +44,21 @@ body{
 
 .container-fluid .navbar-brand{
     color: var(--font-color-2);
-    text-transform: uppercase;
     font-weight: bolder;
     font-size: 2.2em;
-    padding-left: 10px;
     letter-spacing: 1px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+    padding-left: 10px;
 }
 
 .container-fluid .navbar-brand:hover{
     color: var(--font-color-2);
 }
 
-.navbar-brand{
-    margin-left: 25%;
-}
-
 /*header ends here*/
 
 /*main starts here*/
-.box 
-{
+.box {
     position: relative;
     width: 500px;
     height: 490px;
@@ -102,6 +95,7 @@ body{
     animation: animate 6s linear infinite;
     animation-delay: -3s;
 }
+
 @keyframes animate {
     0%
     {

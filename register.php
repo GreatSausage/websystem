@@ -30,16 +30,18 @@
     <link rel="stylesheet" href="register.css?v=<?php echo time(); ?>">
 </head>
 <body>
-<header>
+    <header>
         <!--Navbar-->
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="index.php">&nbsp&nbspWelcome to Garcia's Panciteria</a>
-
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="index.php">
+                <img src="../Ester_Pansitan/logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
         <!--hamburger-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+        </div>
     </header>
 
     <main>
