@@ -1,9 +1,9 @@
 <?php 
     require 'config.php';
     if(isset($_POST["submit"])){
-        $username = $_POST["username"];
+        $email = $_POST["email"];
         $password = $_POST["password"];
-        $result = mysqli_query($conn, "SELECT * FROM user_form WHERE username = '$username'");
+        $result = mysqli_query($conn, "SELECT * FROM user_form WHERE email = '$email'");
         $row =(mysqli_fetch_assoc($result));
         if(mysqli_num_rows($result) > 0){
             if($password == $row["password"]){
@@ -52,7 +52,7 @@
             <form class="" action="" method="post" autocomplete="off"> 
                 <h2>Log In Form</h2> 
                 <div class="inputBox"> 
-                    <input type="text" name="username" id="username" required value=""> <span>Username</span> <i></i> 
+                    <input type="text" name="email" id="email" required value=""> <span>Email</span> <i></i> 
                 </div> 
                 <div class="inputBox"> 
                     <input type="password" name="password" id="password" required value=""> <span>Password</span> <i></i> 
