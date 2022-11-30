@@ -61,7 +61,7 @@
                             <option value="Gcash">Gcash</option>
                         </select>
                 </div>
-                <button type="submit" name="submit" class='submit-btn'>Sign Up</button>
+                <button type="submit" name="submit" class='submit-btn'>Order Now</button>
         </form>
     </div>
     <!--main ends here-->
