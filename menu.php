@@ -71,7 +71,7 @@
                     </div><!--CONTENT-MENU-->
                 </div><!--SINGLE-MENU-->
                 <div class="single-menu"><!--SMALL MIKI-->
-                    <img src="largebihon.jpg" alt=""><!--NO PICTURE FOR SMALL MIKI YET-->
+                    <img src="smallmiki.jpg" alt=""><!--NO PICTURE FOR SMALL MIKI YET-->
                     <div class="content-menu">
                         <h5>Miki</h5>
                         <h6><span>P300 / P400</span></h6>
