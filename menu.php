@@ -58,7 +58,7 @@
                         <h5>Bihon</h5>
                         <h6><span>P300 / P400</span></h6>
                         <p>5 to 6 person</p>
-                        <a href="#" class="button">Order Now!</a>
+                        <a href="checkout.php" class="button">Order Now!</a>
                     </div><!--content-menu-->
                 </div><!--single-menu-->
                 <div class="single-menu"><!--SMALL CANTON-->
@@ -67,7 +67,7 @@
                         <h5>Canton</h5>
                         <h6><span>P300 / P400</span></h6>
                         <p>5 to 6 person</p>
-                        <a href="#" class="button">Order Now!</a>
+                        <a href="checkout.php" class="button">Order Now!</a>
                     </div><!--CONTENT-MENU-->
                 </div><!--SINGLE-MENU-->
                 <div class="single-menu"><!--SMALL MIKI-->
@@ -76,7 +76,7 @@
                         <h5>Miki</h5>
                         <h6><span>P300 / P400</span></h6>
                         <p>5 to 6 person</p>
-                        <a href="#" class="button">Order Now!</a>
+                        <a href="checkout.php" class="button">Order Now!</a>
                     </div><!--CONTENT-MENU-->
                 </div><!--SINGLE-MENU-->
                 </div><!--FIRST COLUMN ENDS-->
@@ -89,7 +89,7 @@
                         <h5>Bihon</h5>
                         <h6><span>P500 / P600</span></h6>
                         <p>10 to 12 person</p>
-                        <a href="#" class="button">Order Now!</a>
+                        <a href="checkout.php" class="button">Order Now!</a>
                     </div><!--CONTENT-MENU-->
                 </div><!--SINGLE-MENU-->
                 <div class="single-menu"><!--MEDIUM CANTON-->
@@ -98,7 +98,7 @@
                         <h5>Canton</h5>
                         <h6><span>P500 / P600</span></h6>
                         <p>10 to 12 person</p>>
-                        <a href="#" class="button">Order Now!</a>
+                        <a href="checkout.php" class="button">Order Now!</a>
                     </div><!--CONTENT-MENU-->
                 </div><!--SINGLE-MENU-->
                 <div class="single-menu"><!--MEDIUM MIKI-->
@@ -107,7 +107,7 @@
                         <h5>miki</h5>
                         <h6><span>P500 / P600</span></h6>
                         <p>10 to 12 person</p>
-                        <a href="#" class="button">Order Now!</a>
+                        <a href="checkout.php" class="button">Order Now!</a>
                     </div><!--CONTENT-MENU-->
                 </div><!--SINGLE-MENU-->
             </div><!--SECOND MENU COLUMN-->
@@ -120,7 +120,7 @@
                         <h5>Bihon</h5>
                         <h6><span>P700 / P800</span></h6>
                         <p>13 to 15 person</p>
-                        <a href="#" class="button">Order Now!</a>
+                        <a href="checkout.php" class="button">Order Now!</a>
                     </div><!--CONTENT-MENU-->
                 </div><!--SINGLE-MENU-->
                 <div class="single-menu"><!--LARGE CANTON-->
@@ -129,7 +129,7 @@
                         <h5>Canton</h5>
                         <h6><span>P700 / P800</span></h6>
                         <p>13 to 15 person</p>
-                        <a href="#" class="button">Order Now!</a>
+                        <a href="checkout.php" class="button">Order Now!</a>
                     </div><!--CONTENT-MENU-->
                 </div><!--SINGLE-MENU-->
                 <div class="single-menu"><!--LARGE MIKI-->
@@ -138,7 +138,7 @@
                         <h5>miki</h5>
                         <h6><span>P700 / P800</span></h6>
                         <p>13 to 15 person</p>
-                        <a href="#" class="button">Order Now!</a>
+                        <a href="checkout.php" class="button">Order Now!</a>
                     </div><!--CONTENT-MENU-->
                 </div><!--SINGLE-MENU-->
             </div><!--THIRD MENU COLUMN-->
