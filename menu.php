@@ -102,7 +102,7 @@
                     </div><!--CONTENT-MENU-->
                 </div><!--SINGLE-MENU-->
                 <div class="single-menu"><!--MEDIUM MIKI-->
-                    <img src="largebihon.jpg" alt=""><!--NO PICTURE FOR MEDIUM MIKI YET-->
+                    <img src="mediummiki.jpg" alt=""><!--NO PICTURE FOR MEDIUM MIKI YET-->
                     <div class="content-menu">
                         <h5>miki</h5>
                         <h6><span>P500 / P600</span></h6>
@@ -133,7 +133,7 @@
                     </div><!--CONTENT-MENU-->
                 </div><!--SINGLE-MENU-->
                 <div class="single-menu"><!--LARGE MIKI-->
-                    <img src="mediumbihon.jpg" alt=""><!--NO PICTURE FOR LARGE MIKI YET-->
+                    <img src="largemiki.jpg" alt=""><!--NO PICTURE FOR LARGE MIKI YET-->
                     <div class="content-menu">
                         <h5>miki</h5>
                         <h6><span>P700 / P800</span></h6>
