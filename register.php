@@ -13,7 +13,7 @@
             echo "<script> alert('Password do not match'); </script>";
         }
         else{
-            $query = "INSERT INTO user_form Values('','$username','$email','$password')";
+            $query = "INSERT INTO user_form Values('','$username','$email','$password','')";
             mysqli_query($conn,$query);
             header("Location: login.php");
         }            
