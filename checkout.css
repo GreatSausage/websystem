@@ -85,7 +85,7 @@ body{
 {
     position: relative;
     width: 500px;
-    height: 490px;
+    height: 550px;
     background: var(--font-color-1);
     border-radius: 8px;
     overflow: hidden;

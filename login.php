@@ -3,7 +3,7 @@
     if(isset($_POST["submit"])){
         $email = $_POST["email"];
         $password = $_POST["password"];
-        $result = mysqli_query($conn, "SELECT * FROM user_form WHERE email = '$email'");
+        $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
         $row =(mysqli_fetch_assoc($result));
         if(mysqli_num_rows($result) > 0){
             if($password == $row["password"]){

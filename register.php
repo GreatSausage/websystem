@@ -5,7 +5,7 @@
         $email = $_POST["email"];
         $password = $_POST["password"];
         $confirmpassword = $_POST["confirmpassword"];
-        $duplicate = mysqli_query($conn, "SELECT * FROM user_form WHERE username = '$username' OR email = '$email'");
+        $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username' OR email = '$email'");
         if(mysqli_num_rows($duplicate) > 0){
             echo "<script> alert('Username or Email has already taken');</script>";
         }
@@ -13,7 +13,7 @@
             echo "<script> alert('Password do not match'); </script>";
         }
         else{
-            $query = "INSERT INTO user_form Values('','$username','$email','$password','')";
+            $query = "INSERT INTO users Values('','$username','$email','$password','')";
             mysqli_query($conn,$query);
             header("Location: login.php");
         }            
