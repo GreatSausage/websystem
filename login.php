@@ -1,24 +1,41 @@
 <?php 
-    require 'config.php';
+    @include 'config.php';
+    session_start();
     if(isset($_POST["submit"])){
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-        $result = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
-        $row =(mysqli_fetch_assoc($result));
-        if(mysqli_num_rows($result) > 0){
-            if($password == $row["password"]){
-                $_SESSION["login"] = true;
-                $_SESSION["id"] = $row["id"];
-                header("Location: index.php ");
+        $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+        $email = mysqli_real_escape_string($conn, $filter_email);
+        $filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+        $pass = mysqli_real_escape_string($conn, md5($filter_pass));
+     
+        $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
+
+        if(mysqli_num_rows($select_users) > 0){
+      
+            $row = mysqli_fetch_assoc($select_users);
+      
+            if($row['user_type'] == 'admin'){
+      
+               $_SESSION['admin_name'] = $row['name'];
+               $_SESSION['admin_email'] = $row['email'];
+               $_SESSION['admin_id'] = $row['id'];
+               header('location:admin_page.php');
+      
+            }elseif($row['user_type'] == 'user'){
+      
+               $_SESSION['user_name'] = $row['name'];
+               $_SESSION['user_email'] = $row['email'];
+               $_SESSION['user_id'] = $row['id'];
+               header('location:index.php');
+      
+            }else{
+               $message[] = 'no user found!';
             }
-            else{
-                echo "<script> alert('Incorrect Username/Email or Password'); </script>";
-            }
-        }
-            else{
-                echo "<script> alert('User Not Registered'); </script>";
-            }
-    }
+      
+         }else{
+            $message[] = 'incorrect email or password!';
+         }
+      
+      }
 ?>
 <!DOCTYPE html>
 <html lang="en">

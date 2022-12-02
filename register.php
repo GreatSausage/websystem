@@ -1,20 +1,26 @@
 <?php 
     require 'config.php';
     if(isset($_POST["submit"])){
-        $username = $_POST["username"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
-        $confirmpassword = $_POST["confirmpassword"];
-        $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username' OR email = '$email'");
+    $filter_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $name = mysqli_real_escape_string($conn, $filter_name);
+    $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+    $email = mysqli_real_escape_string($conn, $filter_email);
+    $filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
+    $pass = mysqli_real_escape_string($conn, md5($filter_pass));
+    $filter_cpass = filter_var($_POST['cpass'], FILTER_SANITIZE_STRING);
+    $cpass = mysqli_real_escape_string($conn, md5($filter_cpass));
+
+   $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
+   $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE name = '$name' OR email = '$email'");
         if(mysqli_num_rows($duplicate) > 0){
             echo "<script> alert('Username or Email has already taken');</script>";
         }
-        if($password != $confirmpassword){
+        if($pass != $cpass){
             echo "<script> alert('Password do not match'); </script>";
         }
         else{
-            $query = "INSERT INTO users Values('','$username','$email','$password','')";
-            mysqli_query($conn,$query);
+            $query = "INSERT INTO user_form Values('','$name','$email','$pass')";
+            mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$pass')") or die('query failed');
             header("Location: login.php");
         }            
     }  
@@ -50,7 +56,7 @@
             <form class="" action="" method="POST" autocomplete="off"> 
                 <h2>Register Form</h2> 
                 <div class="inputBox"> 
-                    <input type="text" name="username" id="username" required value=""> <span>Username</span> <i></i> 
+                    <input type="text" name="name" id="username" required value=""> <span>Username</span> <i></i> 
                 </div> 
                 <div class="inputBox"> 
                     <input type="text" name="email" id="email" required value=""> <span>Email</span> <i></i> 
