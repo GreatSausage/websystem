@@ -50,7 +50,7 @@ $admin_id = $_SESSION['admin_id'];
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>products</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-   <link rel="stylesheet" href="../Admin/assets/css/style.css">
+   <link rel="stylesheet" href="admin.css?v=<?php echo time(); ?>">
 </head>
 <body>
    <?php @include 'admin_header.php'; ?>
@@ -75,7 +75,7 @@ $admin_id = $_SESSION['admin_id'];
                while($fetch_products = mysqli_fetch_assoc($select_products)){
          ?>
          <div class="box">
-            <div class="price">₱<?php echo $fetch_products['price']; ?>/-</div>
+            <div class="price">₱<?php echo $fetch_products['price']; ?></div>
             <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
             <div class="name"><?php echo $fetch_products['name']; ?></div>
             <div class="details"><?php echo $fetch_products['details']; ?></div>

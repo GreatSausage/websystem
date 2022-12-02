@@ -21,7 +21,7 @@ $admin_id = $_SESSION['admin_id'];
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Dashboard</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-   <link rel="stylesheet" href="../Admin/assets/css/style.css">
+   <link rel="stylesheet" href="admin.css?v=<?php echo time(); ?>">
 </head>
 <body>
    <?php @include 'admin_header.php'; ?>
@@ -35,9 +35,9 @@ $admin_id = $_SESSION['admin_id'];
                while($fetch_users = mysqli_fetch_assoc($select_users)){
          ?>
          <div class="box">
-            <p>user id : <span><?php echo $fetch_users['id']; ?></span></p>
-            <p>username : <span><?php echo $fetch_users['name']; ?></span></p>
-            <p>email : <span><?php echo $fetch_users['email']; ?></span></p>
+            <p>User id : <span><?php echo $fetch_users['id']; ?></span></p>
+            <p>Username : <span><?php echo $fetch_users['name']; ?></span></p>
+            <p>Email : <span><?php echo $fetch_users['email']; ?></span></p>
             <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('delete this user?');" class="delete-btn">delete</a>
          </div>
       <?php

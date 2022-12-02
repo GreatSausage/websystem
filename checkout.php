@@ -37,6 +37,7 @@ if(isset($_POST['order'])){
         mysqli_query($conn, "INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES('$user_id', '$name', '$number', '$email', '$method', '$address', '$total_products', '$cart_total', '$placed_on')") or die('query failed');
         mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
         $message[] = 'order placed successfully!';
+        header('location:menu.php');
     }
 }
 ?>
@@ -58,7 +59,7 @@ if(isset($_POST['order'])){
         <!--Navbar-->
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="home.php">
+                <a class="navbar-brand" href="index.php">
                     <img src="../Admin/assets/imgs/logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
 
         <!--hamburger-->
@@ -70,7 +71,7 @@ if(isset($_POST['order'])){
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="home.php">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="menu.php" class="nav-link">Menu</a>
