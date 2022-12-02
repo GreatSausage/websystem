@@ -159,12 +159,16 @@ h4 {
 
 }
 
+/*name, price*/
 .single-menu .menu-content h6{
-    color: var(--white);
+    padding-top: 5px;
+    color: var(--font-color-2);
+    font-weight: bolder;
+    font-size: 1.2rem;
 }
 
-.single-menu .menu-content p{
-    color: var(--white);
+.single-menu .menu-content .details{
+    text-transform: none;
 }
 
 .single-menu .menu-content .button{
