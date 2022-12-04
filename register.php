@@ -21,7 +21,7 @@
         else{
             $query = "INSERT INTO user_form Values('','$name','$email','$pass')";
             mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$pass')") or die('query failed');
-            header("Location: login.php");
+            header('location:login.php');
         }            
     }  
 ?>
