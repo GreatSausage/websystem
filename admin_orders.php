@@ -1,10 +1,6 @@
 <?php
-
 @include 'config.php';
-
 session_start();
-
-
 if(isset($_POST['update_order'])){
    $order_id = $_POST['order_id'];
    $update_payment = $_POST['update_payment'];
@@ -17,7 +13,6 @@ if(isset($_GET['delete'])){
    mysqli_query($conn, "DELETE FROM `orders` WHERE id = '$delete_id'") or die('query failed');
    header('location:admin_orders.php');
 }
-
 ?>
 
 <!DOCTYPE html>

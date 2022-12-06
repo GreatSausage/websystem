@@ -60,7 +60,7 @@ $admin_id = $_SESSION['admin_id'];
       <form action="" method="POST" enctype="multipart/form-data">
          <h3>Add New Product</h3>
          <input type="text" class="box" required placeholder="Enter Product Name" name="name">
-         <input type="number" min="0" class="box" required placeholder="Enter Product Price" name="price">
+         <input type="text" min="0" class="box" required placeholder="Enter Product Price" name="price">
          <textarea name="details" class="box" required placeholder="Enter Product Details" cols="30" rows="10"></textarea>
          <input type="file" accept="image/jpg, image/jpeg, image/png" required class="box" name="image">
          <input type="submit" value="Add Product" name="add_product" class="btn">

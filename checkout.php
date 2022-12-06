@@ -110,7 +110,7 @@ if(isset($_POST['order'])){
                 </div>
                 
                 <div class="inputBox"> 
-                    <input type="number" name="number" id="number" required value=""> <span>Phone Number</span> <i></i> 
+                    <input type="text" name="number" id="number" required value=""> <span>Phone Number</span> <i></i> 
                 </div>
                 <div class="inputBox">
                         <select name="method">

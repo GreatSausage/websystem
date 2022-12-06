@@ -48,6 +48,7 @@ $admin_id = $_SESSION['admin_id'];
 <body>
    <?php @include 'admin_header.php'; ?>
    <section class="update-product">
+     
       <?php
          $update_id = $_GET['update'];
          $select_products = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$update_id'") or die('query failed');
@@ -56,6 +57,7 @@ $admin_id = $_SESSION['admin_id'];
       ?>
 
    <form action="" method="post" enctype="multipart/form-data">
+   <h3>Update Products</h3>
       <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" class="image"  alt="">
       <input type="hidden" value="<?php echo $fetch_products['id']; ?>" name="update_p_id">
       <input type="hidden" value="<?php echo $fetch_products['image']; ?>" name="update_p_image">
