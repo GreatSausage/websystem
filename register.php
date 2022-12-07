@@ -56,10 +56,10 @@
         <form class="" action="" method="POST" autocomplete="off"> 
             <h2>Register Form</h2> 
             <div class="inputBox"> 
-                <input type="text" name="name" id="username" required value=""> <span>Username</span> <i></i> 
+                <input type="text" name="name" id="username" required value=""> <span>Full Name</span> <i></i> 
             </div> 
             <div class="inputBox"> 
-                <input type="text" name="email" id="email" required value=""> <span>Email</span> <i></i> 
+                <input type="email" name="email" id="email" required value=""> <span>Email</span> <i></i> 
             </div>
             <div class="inputBox"> 
                 <input type="password" name="password" id="password" required value=""> <span>Password</span> <i></i> 

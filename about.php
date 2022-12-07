@@ -50,39 +50,30 @@
 </div>       
 </header>
 
-    <!--main starts here-->
-    <section class="heading">
-        <h3>about us</h3>
-        <p class=link> <a href="index.php">home</a> / about </p>
-        <div class="line"></div>
+<!--main starts here-->
+<section class="heading">
+    <p class="text-center">About Us</p>
+    <div class="line"></div>
+</section>
+
+    <section class="about">
+        <div class="d-flex flex-row mb-3">
+        <div class="p-2 fs-1 fw-bolder">How did Garcia's Panciteria</br>start?</div>
+        <div class="p-2 fs-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGarcia's Panciteria was established in 1998 after the family's mother lost her work in a panciteria as well. But one day, she begins to consider how she might support her family financially. She had prior experience working in that industry, so she reasoned why not open her own panciteria. Since the panciteria was just starting out, she had to be persistent in the face of rival businesses as well as the lack of public awareness of the eatery. Over time, the panciteria gained popularity, and many people came from far away to visit and buy her pancit.</div>
+    </div>
     </section>
 
-    <section class="home" id="home">
-        <div class="content">
-            <h3>How did Garcia Panciteria</br>start?</h3>
-            <p class="about">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGarcia's Panciteria was established in 1998 after the family's mother lost her work in a panciteria as well. But one day, she begins to consider how she might support her family financially. She had prior experience working in that industry, so she reasoned why not open her own panciteria. Since the panciteria was just starting out, she had to be persistent in the face of rival businesses as well as the lack of public awareness of the eatery. Over time, the panciteria gained popularity, and many people came from far away to visit and buy her pancit.</p>
-            </p>
+    <section class="about">
+        <div class="d-flex flex-row-reverse">
+        <div class="p-2 fs-1 fw-bolder text-end">Why choose us?</div>
+        <div class="p-2 fs-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGarcia's Panciteria was established in 1998 after the family's mother lost her work in a panciteria as well. But one day, she begins to consider how she might support her family financially. She had prior experience working in that industry, so she reasoned why not open her own panciteria. Since the panciteria was just starting out, she had to be persistent in the face of rival businesses as well as the lack of public awareness of the eatery. Over time, the panciteria gained popularity, and many people came from far away to visit and buy her pancit.</div>
         </div>
     </section>
 
     <section class="about">
-        <div class="flex">
-            <div class="image">
-                <img src="images/about-img-1.png" alt="">
-            </div>
-            <div class="content">
-                <h3>why choose us?</h3>
-                <p>Because the pancit that we served at our panciteria, brings people together.</p>
-            </div>
-        </div>
-        <div class="flex">
-            <div class="content">
-                <h3>what we provide?</h3>
-                <p>With fresh and high-quality ingredients, we offer feels like home pancit.</p>
-            </div>
-            <div class="image">
-                <img src="images/about-img-2.jpg" alt="">
-            </div>
+        <div class="d-flex flex-row mb-3">
+        <div class="p-2 fs-1 fw-bolder">What we provide?</div>
+        <div class="p-2 fs-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGarcia's Panciteria was established in 1998 after the family's mother lost her work in a panciteria as well. But one day, she begins to consider how she might support her family financially. She had prior experience working in that industry, so she reasoned why not open her own panciteria. Since the panciteria was just starting out, she had to be persistent in the face of rival businesses as well as the lack of public awareness of the eatery. Over time, the panciteria gained popularity, and many people came from far away to visit and buy her pancit.</div>
         </div>
     </section>
 <!--main ends here-->

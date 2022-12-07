@@ -64,7 +64,6 @@ $user_id = $_SESSION['user_id'];
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.php">
             <img src="logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
-    </div>
     <!--hamburger-->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
