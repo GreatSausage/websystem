@@ -10,18 +10,16 @@
     <title>About Garcia's Panciteria</title>
 </head>
 <body>
-    <!--header-->
-    <header>
-        <!--Navbar-->
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="index.php">
-                <img src="logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
-        </div>
+<header>
+<!--Navbar-->
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="index.php">
+        <img src="logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
         <!--hamburger-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>                
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>                  
         <!--menulist-->
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
@@ -35,11 +33,22 @@
                     <a class="nav-link" href="about.php">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="logout.php" alt=""><span class="icon"><ion-icon name="log-out-outline"></ion-icon></span></a>
+                    <a class="nav-link" href="cart.php" alt="">
+                    <span class="icon">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php" alt="">
+                    <span class="icon">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                    </span></a>
                 </li>
             </ul>
-        </div>       
-    </header>
+        </div>
+    </nav>
+</div>       
+</header>
 
     <!--main starts here-->
     <section class="heading">

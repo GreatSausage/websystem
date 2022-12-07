@@ -42,7 +42,7 @@ $user_id = $_SESSION['user_id'];
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="index.php">
-            <img src="../Admin/assets/imgs/logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
+            <img src="logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
 <!--hamburger-->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -51,7 +51,7 @@ $user_id = $_SESSION['user_id'];
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="home.php">Home</a>
+                <a class="nav-link" aria-current="page" href="index.php">Home</a>
             </li>
             <li class="nav-item">
                 <a href="menu.php" class="nav-link">Menu</a>
