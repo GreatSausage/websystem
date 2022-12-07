@@ -77,6 +77,7 @@ body{
     background: linear-gradient(0deg,transparent,var(--header-left),var(--header-left));
     animation: animate 6s linear infinite;
 }
+
 .box::after {
     content: '';
     z-index: 1;
@@ -140,8 +141,7 @@ h2 {
     z-index: 10;
 }
 
-.inputBox span 
-{
+.inputBox span {
     position: absolute;
     left: 0;
     padding: 20px 0px 10px;

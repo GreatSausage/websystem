@@ -8,20 +8,19 @@
     <title>Homepage - Garcia's Panciteria</title>
 </head>
 <body>
-    <!--header-->
-    <?php include "header.php"; ?>
+<!--header-->
+<?php include "header.php"; ?>
 
-    <!--main-->
-    <main>
-        <!--upperpart of homepage-->
-        <div class = "content">
-            <h3>Welcome to <br>Garcia's Panciteria</h3>
-            <div class="underline"></div>
-            <p>The home of mouth watering pancit</p>
-            <a href="menu.php" class="button">Order Now!</a>
-        </div>
-            
-    </main>
+<!--main-->
+<main>
+<!--upperpart of homepage-->
+<div class = "content">
+    <h3>Welcome to <br>Garcia's Panciteria</h3>
+    <div class="underline"></div>
+        <p>The home of mouth watering pancit</p>
+        <a href="menu.php" class="button">Order Now!</a>
+    </div>      
+</main>
 
 </body>
 </html>

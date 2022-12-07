@@ -10,27 +10,25 @@ $admin_id = $_SESSION['admin_id'];
       $name = mysqli_real_escape_string($conn, $_POST['name']);
       $price = mysqli_real_escape_string($conn, $_POST['price']);
       $details = mysqli_real_escape_string($conn, $_POST['details']);
-
       mysqli_query($conn, "UPDATE `products` SET name = '$name', details = '$details', price = '$price' WHERE id = '$update_p_id'") or die('query failed');
-
       $image = $_FILES['image']['name'];
       $image_size = $_FILES['image']['size'];
       $image_tmp_name = $_FILES['image']['tmp_name'];
       $image_folter = 'uploaded_img/'.$image;
       $old_image = $_POST['update_p_image'];
       
-   if(!empty($image)){
-      if($image_size > 2000000){
-         $message[] = 'image file size is too large!';
+      if(!empty($image)){
+         if($image_size > 2000000){
+            $message[] = 'image file size is too large!';
+         }
+         else{
+            mysqli_query($conn, "UPDATE `products` SET image = '$image' WHERE id = '$update_p_id'") or die('query failed');
+            move_uploaded_file($image_tmp_name, $image_folter);
+            unlink('uploaded_img/'.$old_image);
+            $message[] = 'image updated successfully!';
+         }
       }
-      else{
-         mysqli_query($conn, "UPDATE `products` SET image = '$image' WHERE id = '$update_p_id'") or die('query failed');
-         move_uploaded_file($image_tmp_name, $image_folter);
-         unlink('uploaded_img/'.$old_image);
-         $message[] = 'image updated successfully!';
-      }
-   }
-   $message[] = 'product updated successfully!';
+      $message[] = 'product updated successfully!';
    }
 ?>
 
@@ -46,15 +44,17 @@ $admin_id = $_SESSION['admin_id'];
 </head>
 
 <body>
-   <?php @include 'admin_header.php'; ?>
-   <section class="update-product">
-     
-      <?php
-         $update_id = $_GET['update'];
-         $select_products = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$update_id'") or die('query failed');
-         if(mysqli_num_rows($select_products) > 0){
-            while($fetch_products = mysqli_fetch_assoc($select_products)){
-      ?>
+<!--header-->
+<?php @include 'admin_header.php'; ?>
+
+<!--main starts here-->
+<section class="update-product">
+   <?php
+      $update_id = $_GET['update'];
+      $select_products = mysqli_query($conn, "SELECT * FROM `products` WHERE id = '$update_id'") or die('query failed');
+      if(mysqli_num_rows($select_products) > 0){
+         while($fetch_products = mysqli_fetch_assoc($select_products)){
+   ?>
 
    <form action="" method="post" enctype="multipart/form-data">
       <h3>Update Products</h3>
@@ -70,10 +70,11 @@ $admin_id = $_SESSION['admin_id'];
    </form>
 
    <?php
-         }
-      }else{
-         echo '<p class="empty">no update product select</p>';
       }
+   }
+   else{
+      echo '<p class="empty">no update product select</p>';
+   }
    ?>
 </section>
 
