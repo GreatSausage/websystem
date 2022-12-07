@@ -13,13 +13,13 @@
         $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
             if(mysqli_num_rows($select_users) > 0){
                 echo "<script> alert('Username or Email has already taken');</script>";
-                if($password == $cpassword){
+                if($password != $cpassword){
+                    echo "<script> alert('Password not match!');</script>";
+                }
+                else{
                     mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$password')") or die('query failed');
                     echo("<script>alert('Registered Successfully!')</script>");
                     echo("<script>window.location = 'login.php';</script>");
-                }
-                else{
-                    echo "<script> alert('Password not match!');</script>";
                 }
             }
     }  
