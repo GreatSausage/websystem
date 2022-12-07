@@ -25,7 +25,7 @@
     <div class="d-flex flex-column mb-0">
         <a href = "#" class="p-2 text-decoration-none">Contact No: 09602896225</a>
         <a href = "#" class="p-2 text-decoration-none">Address: 04 Candaza St. Tuktukan, Taguig City</a>
-        <a href = "#" class="p-2 text-decoration-none">Scroll up</a>
+        <a href = "https://github.com/GreatSausage/websystem" class="p-2 text-decoration-none">Github</a>
     </div>
 </div>
 </footer>
