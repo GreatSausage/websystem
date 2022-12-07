@@ -50,7 +50,7 @@
 
 <section class="home" id="home">
         <div class="content">
-            <h3>What is </br>How did Garcia Panciteria</br>started?</h3>
+            <h3>How did Garcia Panciteria</br>started?</h3>
             <p class="about">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGarcia's Panciteria was established in 1998 after the family's mother lost her work in a panciteria as well. But one day, she begins to consider how she might support her family financially. She had prior experience working in that industry, so she reasoned why not open her own panciteria. Since the panciteria was just starting out, she had to be persistent in the face of rival businesses as well as the lack of public awareness of the eatery. Over time, the panciteria gained popularity, and many people came from far away to visit and buy her pancit.</p>
             </p>
         </div>
