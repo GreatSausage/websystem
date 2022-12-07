@@ -22,8 +22,8 @@
 body{
     min-height: 100vh;
     background:url(pansit.jpg) no-repeat;
-    background-size:cover;
-    background-position: center;
+    background-size:auto;
+    background-position: cover;
 }
 
 /*header starts here*/

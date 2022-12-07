@@ -24,28 +24,26 @@ $admin_id = $_SESSION['admin_id'];
    <link rel="stylesheet" href="admin.css?v=<?php echo time(); ?>">
 </head>
 <body>
-<!--header-->
-<?php @include 'admin_header.php'; ?>
+   <?php @include 'admin_header.php'; ?>
 
-<!--main starts here-->
-<section class="users">
-   <h1 class="title">Account Users</h1>
-   <div class="box-container">
-   <?php
-      $select_users = mysqli_query($conn, "SELECT * FROM `users`") or die('query failed');
-      if(mysqli_num_rows($select_users) > 0){
-         while($fetch_users = mysqli_fetch_assoc($select_users)){
-   ?>
-      <div class="box">
-         <p>User id : <span><?php echo $fetch_users['id']; ?></span></p>
-         <p>Username : <span><?php echo $fetch_users['name']; ?></span></p>
-         <p>Email : <span><?php echo $fetch_users['email']; ?></span></p>
-         <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('delete this user?');" class="delete-btn">delete</a>
-      </div>
-   <?php
-      }
-      }
-      ?>
+   <section class="users">
+      <h1 class="title">Account Users</h1>
+      <div class="box-container">
+         <?php
+            $select_users = mysqli_query($conn, "SELECT * FROM `users`") or die('query failed');
+            if(mysqli_num_rows($select_users) > 0){
+               while($fetch_users = mysqli_fetch_assoc($select_users)){
+         ?>
+         <div class="box">
+            <p>User id : <span><?php echo $fetch_users['id']; ?></span></p>
+            <p>Username : <span><?php echo $fetch_users['name']; ?></span></p>
+            <p>Email : <span><?php echo $fetch_users['email']; ?></span></p>
+            <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>" onclick="return confirm('delete this user?');" class="delete-btn">delete</a>
+         </div>
+      <?php
+               }
+            }
+         ?>
       </div>
 </section>
 

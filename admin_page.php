@@ -15,15 +15,11 @@ session_start();
 </head>
 
 <body>
-
-<!--header-->
 <?php @include 'admin_header.php'; ?>
-
-<!--main starts here-->
-<section class="dashboard">
-   <h1 class="title">Dashboard</h1>
-   <div class="box-container">
-      <div class="box">
+   <section class="dashboard">
+      <h1 class="title">Dashboard</h1>
+      <div class="box-container">
+         <div class="box">
          <?php
             $total_pendings = 0;
             $select_pendings = mysqli_query($conn, "SELECT * FROM `orders` WHERE payment_status = 'pending'") or die('query failed');
@@ -31,9 +27,10 @@ session_start();
                $total_pendings += $fetch_pendings['total_price'];
             };
          ?>
-         <h3>₱<?php echo $total_pendings; ?>/-</h3>
-         <p>Total Pendings</p>
-      </div>
+            <h3>₱<?php echo $total_pendings; ?>/-</h3>
+            <p>Total Pendings</p>
+         </div>
+
       <div class="box">
          <?php
             $total_completes = 0;
@@ -45,6 +42,7 @@ session_start();
          <h3>₱<?php echo $total_completes; ?>/-</h3>
          <p>Completed Payments</p>
       </div>
+
       <div class="box">
          <?php
             $select_orders = mysqli_query($conn, "SELECT * FROM `orders`") or die('query failed');
@@ -53,6 +51,7 @@ session_start();
          <h3><?php echo $number_of_orders; ?></h3>
          <p>Orders Placed</p>
       </div>
+
       <div class="box">
          <?php
             $select_products = mysqli_query($conn, "SELECT * FROM `products`") or die('query failed');
@@ -61,6 +60,7 @@ session_start();
          <h3><?php echo $number_of_products; ?></h3>
          <p>Products Added</p>
       </div>
+
       <div class="box">
          <?php
             $select_account = mysqli_query($conn, "SELECT * FROM `users`") or die('query failed');
@@ -69,7 +69,7 @@ session_start();
          <h3><?php echo $number_of_account; ?></h3>
          <p>Total Accounts</p>
       </div>
-   </div><!--box-container-->
+   </div>
 </section>
 
 <script src="js/admin_script.js"></script>
