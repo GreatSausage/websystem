@@ -57,26 +57,29 @@
 </section>
 
     <section class="about">
-        <div class="d-flex flex-row mb-3">
-        <div class="p-2 fs-1 fw-bolder">How did Garcia's Panciteria</br>start?</div>
-        <div class="p-2 fs-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGarcia's Panciteria was established in 1998 after the family's mother lost her work in a panciteria as well. But one day, she begins to consider how she might support her family financially. She had prior experience working in that industry, so she reasoned why not open her own panciteria. Since the panciteria was just starting out, she had to be persistent in the face of rival businesses as well as the lack of public awareness of the eatery. Over time, the panciteria gained popularity, and many people came from far away to visit and buy her pancit.</div>
+        <div class="d-flex flex-row mb-3 border-bottom">
+        <div class="p-2 fs-1 fw-bolder text-start">How did Garcia's Panciteria start?</div>
+        <div class="p-2 fs-4 lh-base">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGarcia's Panciteria was established in 1998 after the family's mother lost her work in a panciteria as well. But one day, she begins to consider how she might support her family financially. She had prior experience working in that industry, so she reasoned why not open her own panciteria. Since the panciteria was just starting out, she had to be persistent in the face of rival businesses as well as the lack of public awareness of the eatery. Over time, the panciteria gained popularity, and many people came from far away to visit and buy her pancit.</div>
     </div>
     </section>
 
     <section class="about">
-        <div class="d-flex flex-row-reverse">
+        <div class="d-flex flex-row-reverse border-bottom">
         <div class="p-2 fs-1 fw-bolder text-end">Why choose us?</div>
-        <div class="p-2 fs-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGarcia's Panciteria was established in 1998 after the family's mother lost her work in a panciteria as well. But one day, she begins to consider how she might support her family financially. She had prior experience working in that industry, so she reasoned why not open her own panciteria. Since the panciteria was just starting out, she had to be persistent in the face of rival businesses as well as the lack of public awareness of the eatery. Over time, the panciteria gained popularity, and many people came from far away to visit and buy her pancit.</div>
+        <div class="p-2 fs-4 lh-base">Because the pancit that we served at our panciteria, brings people together. Quality of Service, Food, and Value of Money are the primary elements for choosing our panciteria. Also our pancit is a food that brings people together.</div>
         </div>
     </section>
 
     <section class="about">
         <div class="d-flex flex-row mb-3">
-        <div class="p-2 fs-1 fw-bolder">What we provide?</div>
-        <div class="p-2 fs-5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGarcia's Panciteria was established in 1998 after the family's mother lost her work in a panciteria as well. But one day, she begins to consider how she might support her family financially. She had prior experience working in that industry, so she reasoned why not open her own panciteria. Since the panciteria was just starting out, she had to be persistent in the face of rival businesses as well as the lack of public awareness of the eatery. Over time, the panciteria gained popularity, and many people came from far away to visit and buy her pancit.</div>
+        <div class="p-2 fs-1 fw-bolder text-start">What we provide?</div>
+        <div class="p-2 fs-4 lh-base">With fresh and high-quality ingredients, we offer feels like home pancit. In our twenty four years in business, we provide feels like home pancit, with fresh and high-quality ingredients. And we are eager to satisfy your cravings and win your hearts out.</div>
         </div>
     </section>
 <!--main ends here-->
+
+<!--footer-->
+<?php include "footer.php"; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

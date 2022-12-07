@@ -120,6 +120,7 @@ $user_id = $_SESSION['user_id'];
         <p><a href="menu.php" class="option-btn">continue shopping</a></p>
     </div>
 </section>
+<!--main ends here-->
 
 <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
