@@ -40,7 +40,8 @@ $user_id = $_SESSION['user_id'];
         $check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
 
         if(mysqli_num_rows($check_cart_numbers) > 0){
-            $message[] = 'already added to cart';
+            echo("<script>alert('Already added to cart')</script>");
+            echo("<script>window.location = 'menu.php';</script>");
         }
         else{
             $check_wishlist_numbers = mysqli_query($conn, "SELECT * FROM `wishlist` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
@@ -48,7 +49,8 @@ $user_id = $_SESSION['user_id'];
             mysqli_query($conn, "DELETE FROM `wishlist` WHERE name = '$product_name' AND user_id = '$user_id'") or die('query failed');
         }
         mysqli_query($conn, "INSERT INTO `cart`(user_id, pid, name, price, quantity, image) VALUES('$user_id', '$product_id', '$product_name', '$product_price', '$product_quantity', '$product_image')") or die('query failed');
-        $message[] = 'product added to cart';
+        echo("<script>alert('Added to cart')</script>");
+        echo("<script>window.location = 'menu.php';</script>");
         }
     }
 
@@ -62,6 +64,7 @@ $user_id = $_SESSION['user_id'];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="menu.css?v=<?php echo time(); ?>">
+    <title>Menu Page</title>
 </head>
 <body>  
 <header>

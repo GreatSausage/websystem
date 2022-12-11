@@ -39,7 +39,7 @@ $user_id = $_SESSION['user_id'];
     else{
         mysqli_query($conn, "INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES('$user_id', '$name', '$number', '$email', '$method', '$address', '$total_products', '$cart_total', '$placed_on')") or die('query failed');
         mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
-        echo("<script>alert('Ordered placed sucessfully!')</script>");
+        echo("<script>alert('Order placed successfully')</script>");
         echo("<script>window.location = 'menu.php';</script>");
     }
 }
