@@ -1,27 +1,28 @@
 <?php 
     require 'config.php';
     if(isset($_POST['submit'])){
-        $filter_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-        $name = mysqli_real_escape_string($conn, $filter_name);
-        $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
-        $email = mysqli_real_escape_string($conn, $filter_email);
-        $filter_password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
-        $password = mysqli_real_escape_string($conn, md5($filter_password));
-        $filter_cpassword = filter_var($_POST['cpassword'], FILTER_SANITIZE_STRING);
-        $cpassword = mysqli_real_escape_string($conn, md5($filter_cpassword));
+        
+    $filter_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $name = mysqli_real_escape_string($conn, $filter_name);
+    $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
+    $email = mysqli_real_escape_string($conn, $filter_email);
+    $filter_password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+    $password = mysqli_real_escape_string($conn, md5($filter_password));
+    $filter_cpassword = filter_var($_POST['cpassword'], FILTER_SANITIZE_STRING);
+    $cpassword = mysqli_real_escape_string($conn, md5($filter_cpassword));
 
-        $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
-            if(mysqli_num_rows($select_users) > 0){
-                echo "<script> alert('Username or Email has already taken');</script>";
-                if($password != $cpassword){
-                    echo "<script> alert('Password not match!');</script>";
-                }
-                else{
-                    mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$password')") or die('query failed');
-                    echo("<script>alert('Registered Successfully!')</script>");
-                    echo("<script>window.location = 'login.php';</script>");
-                }
-            }
+   $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
+    if(mysqli_num_rows($select_users) > 0){
+        echo "<script> alert('Username or Email has already taken');</script>";
+    }else{
+    if($password != $cpassword){
+        echo "<script> alert('Password not match!');</script>";
+    }else{
+        mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$password')") or die('query failed');
+        echo("<script>alert('Registered Successfully!')</script>");
+        echo("<script>window.location = 'login.php';</script>");
+    }
+    }
     }  
 ?>
 
