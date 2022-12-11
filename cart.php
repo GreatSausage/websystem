@@ -3,7 +3,7 @@
 session_start();
 $user_id = $_SESSION['user_id'];
     if(!isset($user_id)){
-        header('location:login.php');
+   header('location:login.php');
     };
 
     if(isset($_GET['delete'])){
@@ -21,7 +21,8 @@ $user_id = $_SESSION['user_id'];
         $cart_id = $_POST['cart_id'];
         $cart_quantity = $_POST['cart_quantity'];
         mysqli_query($conn, "UPDATE `cart` SET quantity = '$cart_quantity' WHERE id = '$cart_id'") or die('query failed');
-        $message[] = 'cart quantity updated!';
+        echo("<script>alert('Cart Updated')</script>");
+        echo("<script>window.location = 'cart.php';</script>");
     }
 ?>
 
