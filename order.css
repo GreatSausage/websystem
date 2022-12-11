@@ -81,8 +81,20 @@ body{
 
 /*header ends here*/
 
+/*main*/
+.empty{
+    color: var(--white);
+    text-align: center;
+    margin: auto;
+    font-size: 2em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding-top: 5%;
+}
+
 /*footer*/
-footer{
+.sticky-footer{
+    position: absolute;
     width: 100%;
     background-color: var(--header-right);
 }
@@ -99,3 +111,4 @@ footer{
 .d-flex a:hover{
     color: var(--font-color-1);
 }
+

@@ -32,6 +32,12 @@
                     <a class="nav-link" href="about.php">About</a>
                 </li>
                 <li class="nav-item">
+                        <a class="nav-link" href="order_page.php" alt="">
+                            <span class="icon">
+                            <ion-icon name="receipt-outline"></ion-icon>
+                        </span></a>
+                    </li>
+                <li class="nav-item">
                     <a class="nav-link" href="cart.php" alt="">
                     <span class="icon">
                         <ion-icon name="cart-outline"></ion-icon>
@@ -43,6 +49,7 @@
                         <ion-icon name="log-out-outline"></ion-icon>
                     </span></a>
                 </li>
+
             </ul>
         </div>
     </nav>

@@ -20,8 +20,7 @@ if(!isset($user_id)){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="menu.css?v=<?php echo time(); ?>">
-    <link rel="stylesheet" href="footer.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="order.css?v=<?php echo time(); ?>">
 </head>
 <body>  
 
@@ -92,7 +91,7 @@ if(!isset($user_id)){
 </div>
 
 <!--footer-->
-<footer class="sticky-footer mt-5">
+<footer class="sticky-footer">
 <div class="d-flex flex-row mb-0 justify-content-evenly">
     <div class="d-flex flex-column mb-0">
     <a href = "index.php" class="p-2 text-decoration-none">Home</a>

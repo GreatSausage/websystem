@@ -98,26 +98,29 @@ $user_id = $_SESSION['user_id'];
 
 <!--main-->
 <div class="box">
-    <form class="" action="" method="POST" autocomplete="off">
-        <h2>Place your order</h2>
-        <div class="underline"></div>
-        <div class="inputBox"> 
-            <h6><span><?php echo $_SESSION['user_name']; ?></span> </h6>
-        </div> 
-        <div class="inputBox"> 
-            <h6><span><?php echo $_SESSION['user_email']; ?></span> </h6> 
-        </div>
-        <div class="inputBox"> 
-            <input type="text" name="address" id="address" required value=""> <span>Address</span> <i></i> 
-        </div> 
-        <div class="inputBox"> 
-            <input type="text" name="number" id="number" required value=""> <span>Phone Number</span> <i></i> 
-        </div>
-        <div class="inputBox">
-            <h6><span>Cash on Delivery</span></h6> 
-        </div>
-        <button type="submit" name="order" class='submit-btn'>Order Now</button>
-    </form>
+        <form class="" action="" method="POST" autocomplete="off">
+            <h2>Place your order</h2>
+            <div class="underline"></div>
+            <div class="inputBox"> 
+                    <h6><span><?php echo $_SESSION['user_name']; ?></span> </h6>
+                </div> 
+                <div class="inputBox"> 
+                    <h6><span class="email"><?php echo $_SESSION['user_email']; ?></span> </h6> 
+                </div>
+                <div class="inputBox"> 
+                    <input type="text" name="address" id="address" required value=""> <span>Address</span> <i></i> 
+                </div>
+                
+                <div class="inputBox"> 
+                    <input type="text" name="number" id="number" required value=""> <span>Phone Number</span> <i></i> 
+                </div>
+                <div class="inputBox">
+                        <select name="method">
+                            <option value="cash on delivery">Cash on delivery</option>
+                        </select>
+                </div>
+                <button type="submit" name="order" class='submit-btn'>Order Now</button>
+        </form>
 </div>
 <!--main ends here-->
 
