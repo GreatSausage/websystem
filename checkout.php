@@ -39,8 +39,8 @@ $user_id = $_SESSION['user_id'];
     else{
         mysqli_query($conn, "INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES('$user_id', '$name', '$number', '$email', '$method', '$address', '$total_products', '$cart_total', '$placed_on')") or die('query failed');
         mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
-        $message[] = 'order placed successfully!';
-        header('location:menu.php');
+        echo("<script>alert('Ordered placed sucessfully!')</script>");
+        echo("<script>window.location = 'menu.php';</script>");
     }
 }
 ?>
@@ -102,10 +102,10 @@ $user_id = $_SESSION['user_id'];
         <h2>Place your order</h2>
         <div class="underline"></div>
         <div class="inputBox"> 
-            <input type="text" name="name" id="name" required value=""> <span>Full Name</span> <i></i> 
+            <h6><span><?php echo $_SESSION['user_name']; ?></span> </h6>
         </div> 
         <div class="inputBox"> 
-            <input type="text" name="email" id="email" required value=""> <span>Email Address</span> <i></i> 
+            <h6><span><?php echo $_SESSION['user_email']; ?></span> </h6> 
         </div>
         <div class="inputBox"> 
             <input type="text" name="address" id="address" required value=""> <span>Address</span> <i></i> 
@@ -114,15 +114,15 @@ $user_id = $_SESSION['user_id'];
             <input type="text" name="number" id="number" required value=""> <span>Phone Number</span> <i></i> 
         </div>
         <div class="inputBox">
-            <select name="method">
-                <option value="Cash on delivery">Cash on delivery</option>
-                <option value="Gcash">Gcash</option>
-            </select>
+            <h6><span>Cash on Delivery</span></h6> 
         </div>
         <button type="submit" name="order" class='submit-btn'>Order Now</button>
     </form>
 </div>
 <!--main ends here-->
+
+<!--footer-->
+<?php include "footer.php"; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

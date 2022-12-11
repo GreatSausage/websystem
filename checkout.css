@@ -86,8 +86,9 @@ body{
     background: var(--font-color-1);
     border-radius: 8px;
     overflow: hidden;
-    margin-top: 6%;
+    margin-top: 10%;
     margin-left: 10%;
+    margin-bottom: 10%;
 }
 
 .box::before{
@@ -97,7 +98,7 @@ body{
     top: -50%;
     left: -50%;
     width: 380px;
-    height: 420px;
+    height: 400px;
     transform-origin: bottom right;
     background: linear-gradient(0deg,transparent,var(--header-left),var(--header-left));
     animation: animate 6s linear infinite;
@@ -207,6 +208,10 @@ h2 {
 .inputBox input:valid ~ i,
 .inputBox input:focus ~ i {
     height: 44px;
+}
+
+.inputBox h6{
+    margin-bottom: 10%;
 }
 
 .links {
