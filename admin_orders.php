@@ -5,7 +5,7 @@ session_start();
       $order_id = $_POST['order_id'];
       $update_payment = $_POST['update_payment'];
       mysqli_query($conn, "UPDATE `orders` SET payment_status = '$update_payment' WHERE id = '$order_id'") or die('query failed');
-      $message[] = 'payment status has been updated!';
+      echo "<script> alert('Payment Status Updated!');</script>";
    }
 
    if(isset($_GET['delete'])){
@@ -13,6 +13,7 @@ session_start();
       mysqli_query($conn, "DELETE FROM `orders` WHERE id = '$delete_id'") or die('query failed');
       header('location:admin_orders.php');
    }
+
 ?>
 
 <!DOCTYPE html>
@@ -26,20 +27,17 @@ session_start();
    <link rel="stylesheet" href="admin.css?v=<?php echo time(); ?>">
 </head>
 <body>
+   <?php @include 'admin_header.php'; ?>
 
-<!--header-->
-<?php @include 'admin_header.php'; ?>
-
-<!--main starts here-->
-<section class="placed-orders">
-   <h1 class="title">Placed Orders</h1>
-   <div class="box-container">
-      <?php
-         $select_orders = mysqli_query($conn, "SELECT * FROM `orders`") or die('query failed');
-         if(mysqli_num_rows($select_orders) > 0){
-            while($fetch_orders = mysqli_fetch_assoc($select_orders)){
-      ?>
-        <div class="box">
+   <section class="placed-orders">
+      <h1 class="title">Placed Orders</h1>
+      <div class="box-container">
+         <?php
+            $select_orders = mysqli_query($conn, "SELECT * FROM `orders`") or die('query failed');
+            if(mysqli_num_rows($select_orders) > 0){
+               while($fetch_orders = mysqli_fetch_assoc($select_orders)){
+         ?>
+      <div class="box">
          <p> user id : <span><?php echo $fetch_orders['user_id']; ?></span> </p>
          <p> placed on : <span><?php echo $fetch_orders['placed_on']; ?></span> </p>
          <p> name : <span><?php echo $_SESSION['user_name']; ?></span> </p>
@@ -48,7 +46,7 @@ session_start();
          <p> address : <span><?php echo $fetch_orders['address']; ?></span> </p>
          <p> total price : <span>₱<?php echo $fetch_orders['total_price']; ?></span> </p>
          <p> total products : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
-         <p> payment method : <span>Cash on delivery</span> </p>
+         <p> payment method : <span><?php echo $fetch_orders['method']; ?></span> </p>
          <form action="" method="post">
             <input type="hidden" name="order_id" value="<?php echo $fetch_orders['id']; ?>">
             <select name="update_payment">
@@ -62,14 +60,12 @@ session_start();
       </div>
       <?php
          }
-      }
-      else{
+      }else{
          echo '<p class="empty">no orders placed yet!</p>';
       }
       ?>
-   </div><!--box-container-->
+   </div>
 </section>
-<!--main ends here-->
 
 <script src="js/admin_script.js"></script>
 </body>

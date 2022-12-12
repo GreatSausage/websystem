@@ -47,6 +47,12 @@ if(!isset($user_id)){
                     <a class="nav-link" href="about.php">About</a>
                 </li>
                 <li class="nav-item">
+                        <a class="nav-link" href="order.php" alt="">
+                            <span class="icon">
+                            <ion-icon name="receipt-outline"></ion-icon>
+                        </span></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="cart.php" alt="">
                     <span class="icon">
                         <ion-icon name="cart-outline"></ion-icon>
@@ -65,52 +71,38 @@ if(!isset($user_id)){
 </header>
     
 <!--main-->
-<div class="box-container">
-    <?php
-        $select_orders = mysqli_query($conn, "SELECT * FROM `orders` WHERE user_id = '$user_id'") or die('query failed');
-        if(mysqli_num_rows($select_orders) > 0){
-            while($fetch_orders = mysqli_fetch_assoc($select_orders)){
-    ?>
-    <div class="box">
-        <p> <b>placed on :</b> <span><?php echo $fetch_orders['placed_on']; ?></span> </p>
-        <p> <b>name :</b> <span><?php echo $_SESSION['user_name']; ?></span> </p>
-        <p> <b>number :</b> <span><?php echo $fetch_orders['number']; ?></span> </p>
-        <p> <b>email :</b> <span><?php echo $_SESSION['user_email']; ?></span> </p>
-        <p> <b>address : </b><span><?php echo $fetch_orders['address']; ?></span> </p>
-        <p> <b>payment method : </b><span><?php echo $fetch_orders['method']; ?></span> </p>
-        <p> <b>your orders :</b> <span><?php echo $fetch_orders['total_products']; ?></span> </p>
-        <p> <b>total price : </b><span>₱<?php echo $fetch_orders['total_price']; ?>.00</span> </p>
-        <p> <b>payment status :</b> <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){echo 'tomato'; }else{echo 'green';} ?>"><?php echo $fetch_orders['payment_status']; ?></span> </p>
-    </div>
-    <?php
+<!--main-->
+
+<div class="container text-start">
+    <div class="row">
+        <?php
+            $select_orders = mysqli_query($conn, "SELECT * FROM `orders` WHERE user_id = '$user_id'") or die('query failed');
+            if(mysqli_num_rows($select_orders) > 0){
+                while($fetch_orders = mysqli_fetch_assoc($select_orders)){
+        ?>
+        <div class="col bg-dark bg-opacity-75 rounded-end rounded-start border border-var(--font-color-2)">
+            <p class="fw-semibold"> Placed on : <span class = "normal"><?php echo $fetch_orders['placed_on']; ?></span> </p>
+            <p class="fw-semibold"> Name : <span class = "normal"><?php echo $_SESSION['user_name']; ?></span> </p>
+            <p class="fw-semibold"> Number : <span class = "normal"><?php echo $fetch_orders['number']; ?></span> </p>
+            <p class="fw-semibold"> Email : <span class = "email"><?php echo $_SESSION['user_email']; ?></span> </p>
+            <p class="fw-semibold"> Address : <span class = "normal"><?php echo $fetch_orders['address']; ?></span> </p>
+            <p class="fw-semibold"> Payment method : <span class = "normal"><?php echo $fetch_orders['method']; ?></span> </p>
+            <p class="fw-semibold"> Your orders : <span class = "normal"><?php echo $fetch_orders['total_products']; ?></span> </p>
+            <p class="fw-semibold"> Total price : <span class = "normal">₱<?php echo $fetch_orders['total_price']; ?>.00</span> </p>
+            <p class="fw-semibold"> Payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'pending'){echo 'tomato'; }else{echo 'green';} ?>"><?php echo $fetch_orders['payment_status']; ?></span> </p>
+        </div>
+        <?php
+            }
+        }else{
+            echo '<p class="empty">no orders placed yet!</p>';
         }
-    }else{
-        echo '<p class="empty">no orders placed yet!</p>';
-    }
-    ?>
+        ?>
+    </div>
 </div>
 
 <!--footer-->
-<footer class="sticky-footer">
-<div class="d-flex flex-row mb-0 justify-content-evenly">
-    <div class="d-flex flex-column mb-0">
-    <a href = "index.php" class="p-2 text-decoration-none">Home</a>
-    <a href = "menu.php" class="p-2 text-decoration-none">Menu</a>
-    <a href = "about.php" class="p-2 text-decoration-none">About us</a>
-    </div>
-    <div class="d-flex flex-column mb-0">
-    <a href = "#" class="p-2 text-decoration-none">My order</a>
-    <a href = "cart.php" class="p-2 text-decoration-none">My cart</a>
-    <a href = "logout.php" class="p-2 text-decoration-none">Sign out</a>
-    </div>
-    <div class="d-flex flex-column mb-0">
-        <a href = "#" class="p-2 text-decoration-none">Contact No: 09602896225</a>
-        <a href = "#" class="p-2 text-decoration-none">Address: 04 Candaza St. Tuktukan, Taguig City</a>
-        <a href = "https://github.com/GreatSausage/websystem" class="p-2 text-decoration-none">Github</a>
-    </div>
-</div>
-</footer>
-<!--footer-->
+    <?php include "footer.php"; ?>
+<!--footer ends-->
 
 <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

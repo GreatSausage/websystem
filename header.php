@@ -32,7 +32,7 @@
                     <a class="nav-link" href="about.php">About</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="order_page.php" alt="">
+                        <a class="nav-link" href="order.php" alt="">
                             <span class="icon">
                             <ion-icon name="receipt-outline"></ion-icon>
                         </span></a>
