@@ -105,11 +105,19 @@ if(isset($_POST['order'])){
         <form class="" action="" method="POST" autocomplete="off">
             <h2>Place your order</h2>
             <div class="underline"></div>
+<<<<<<< HEAD
                 <div class="inputBox"> 
                 <h6><input type="hidden" name="name" id="name" value=""><span><?php echo $_SESSION['user_name']; ?></span></h6>
                 </div> 
                 <div class="inputBox"> 
                     <h6><input type="hidden" name="email" id="email" value=""><span><?php echo $_SESSION['user_email']; ?></span></h6>
+=======
+            <div class="inputBox"> 
+                    <h6><span><?php echo $_SESSION['user_name']; ?></span> </h6>
+                </div> 
+                <div class="inputBox"> 
+                    <h6><span><?php echo $_SESSION['user_email']; ?></span> </h6> 
+>>>>>>> e974f51c6f3c91fc278d86ef2bdf4f86204bfe0b
                 </div>
                 <div class="inputBox"> 
                     <input type="text" name="address" id="address" required value=""> <span>Address</span> <i></i> 
