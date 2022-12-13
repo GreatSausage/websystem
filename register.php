@@ -1,28 +1,28 @@
 <?php 
     require 'config.php';
-    if(isset($_POST["submit"])){
+    if(isset($_POST['submit'])){
+        
     $filter_name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
     $name = mysqli_real_escape_string($conn, $filter_name);
     $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
     $email = mysqli_real_escape_string($conn, $filter_email);
-    $filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
-    $pass = mysqli_real_escape_string($conn, md5($filter_pass));
-    $filter_cpass = filter_var($_POST['cpass'], FILTER_SANITIZE_STRING);
-    $cpass = mysqli_real_escape_string($conn, md5($filter_cpass));
+    $filter_password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+    $password = mysqli_real_escape_string($conn, md5($filter_password));
+    $filter_cpassword = filter_var($_POST['cpassword'], FILTER_SANITIZE_STRING);
+    $cpassword = mysqli_real_escape_string($conn, md5($filter_cpassword));
 
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
-   $duplicate = mysqli_query($conn, "SELECT * FROM users WHERE name = '$name' OR email = '$email'");
-        if(mysqli_num_rows($duplicate) > 0){
-            echo "<script> alert('Username or Email has already taken');</script>";
-        }
-        if($pass != $cpass){
-            echo "<script> alert('Password do not match'); </script>";
-        }
-        else{
-            $query = "INSERT INTO user_form Values('','$name','$email','$pass')";
-            mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$pass')") or die('query failed');
-            header("Location: login.php");
-        }            
+    if(mysqli_num_rows($select_users) > 0){
+        echo "<script> alert('Username or Email has already taken');</script>";
+    }else{
+    if($password != $cpassword){
+        echo "<script> alert('Password not match!');</script>";
+    }else{
+        mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$password')") or die('query failed');
+        echo("<script>alert('Registered Successfully!')</script>");
+        echo("<script>window.location = 'login.php';</script>");
+    }
+    }
     }  
 ?>
 <!DOCTYPE html>
@@ -41,7 +41,7 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="register.php">
-                <img src="../Ester_Pansitan/logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
+                <img src="logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
         <!--hamburger-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -56,16 +56,16 @@
             <form class="" action="" method="POST" autocomplete="off"> 
                 <h2>Register Form</h2> 
                 <div class="inputBox"> 
-                    <input type="text" name="name" id="username" required value=""> <span>Username</span> <i></i> 
+                    <input type="text" name="name" id="username" required> <span>Username</span> <i></i> 
                 </div> 
                 <div class="inputBox"> 
-                    <input type="text" name="email" id="email" required value=""> <span>Email</span> <i></i> 
+                    <input type="email" name="email" id="email" required> <span>Email</span> <i></i> 
                 </div>
                 <div class="inputBox"> 
-                    <input type="password" name="password" id="password" required value=""> <span>Password</span> <i></i> 
+                    <input type="password" name="password" id="password" required> <span>Password</span> <i></i> 
                 </div>
                 <div class="inputBox"> 
-                    <input type="password" name="confirmpassword" id="confirmpassword" required value=""> <span>Confirm Password</span> <i></i><br> 
+                    <input type="password" name="cpassword" id="cpassword" required> <span>Confirm Password</span> <i></i><br> 
                 </div>
                 <div class="links"> <a href="login.php">Already have an account? Sign In Now</a> 
             </div>   

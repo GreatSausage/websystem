@@ -1,4 +1,4 @@
-<!-- =============== Navigation ================ -->
+<!--===============Navigation================-->
 <div class="container">
         <div class="navigation">
             <ul>
@@ -10,7 +10,6 @@
                         <span class="b-name">Garcia's Panciteria</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="admin_page.php">
                         <span class="icon">
@@ -19,7 +18,6 @@
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="admin_users.php">
                         <span class="icon">
@@ -36,7 +34,6 @@
                         <span class="title">Products</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="admin_orders.php">
                         <span class="icon">
@@ -45,7 +42,6 @@
                         <span class="title">Orders</span>
                     </a>
                 </li>
-
                 <li>
                     <a href="logout.php">
                         <span class="icon">
@@ -56,23 +52,18 @@
                 </li>
             </ul>
         </div>
-
         <!-- ========================= Main ==================== -->
         <div class="main">
             <div class="topbar">
                 <div class="toggle">
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
-
-
                 <div class="user">
                     <!--=====Don't Insert Anything here!=====-->
                 </div>
             </div>
-
             <!-- =========== Scripts =========  -->
     <script src="main.js"></script>
-
 <!-- ====== ionicons ======= -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

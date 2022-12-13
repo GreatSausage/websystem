@@ -21,9 +21,9 @@
 
 body{
     min-height: 100vh;
-    background:url(pansit.jpg) no-repeat;
-    background-size:auto;
-    background-position: cover;
+    background:url(../project/image/pansit.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
 }
 
 /*header starts here*/
@@ -80,3 +80,40 @@ body{
 
 
 /*header ends here*/
+
+/*main*/
+.empty{
+    color: var(--white);
+    text-align: center;
+    margin: auto;
+    font-size: 2em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding-top: 5%;
+}
+
+.container{
+    margin-top: 5%;
+    margin-bottom: 8%;
+}
+
+.col{
+    background: var(--header-right);
+    margin-right: 3%;
+}
+.col p{
+    padding-top: 5px;
+    color: var(--white);
+    font-size: 1.3em;
+}
+
+.col .email{
+    text-transform: none;
+    font-weight: normal;
+}
+
+.col .normal{
+    font-weight: normal;
+}
+/*main ends here*/
+

@@ -1,13 +1,13 @@
 <?php 
     @include 'config.php';
     session_start();
-    if(isset($_POST["submit"])){
+    if(isset($_POST['submit'])){
         $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_STRING);
         $email = mysqli_real_escape_string($conn, $filter_email);
-        $filter_pass = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
-        $pass = mysqli_real_escape_string($conn, md5($filter_pass));
+        $filter_password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+        $password = mysqli_real_escape_string($conn, md5($filter_password));
      
-        $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
+        $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$password'") or die('query failed');
 
         if(mysqli_num_rows($select_users) > 0){
       
@@ -18,20 +18,17 @@
                $_SESSION['admin_email'] = $row['email'];
                $_SESSION['admin_id'] = $row['id'];
                header('location:admin_page.php');
-            }
-            elseif($row['user_type'] == 'user'){
+            }elseif($row['user_type'] == 'user'){
                $_SESSION['user_name'] = $row['name'];
                $_SESSION['user_email'] = $row['email'];
                $_SESSION['user_id'] = $row['id'];
                header('location:index.php');   
-            }
-            else{
+            }else{
                 echo "<script> alert('No user found'); </script>";
             }
-        }
-        else{
-            echo "<script> alert('Password do not match'); </script>";
-        }
+            }else{
+                echo "<script> alert('Email or Password do not match'); </script>";
+            }
       
     }
 ?>
@@ -52,7 +49,7 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="login.php">
-                <img src="../Ester_Pansitan/logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
+                <img src="logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
         <!--hamburger-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

@@ -21,7 +21,7 @@ $user_id = $_SESSION['user_id'];
         $cart_id = $_POST['cart_id'];
         $cart_quantity = $_POST['cart_quantity'];
         mysqli_query($conn, "UPDATE `cart` SET quantity = '$cart_quantity' WHERE id = '$cart_id'") or die('query failed');
-        $message[] = 'cart quantity updated!';
+        echo "<script> alert('Cart Updated!');</script>";
     }
 ?>
 
@@ -35,6 +35,7 @@ $user_id = $_SESSION['user_id'];
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous"> 
     <link rel="stylesheet" href="cart.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="footer.css?v=<?php echo time(); ?>">
 </head>
 <body>  
 
@@ -43,7 +44,7 @@ $user_id = $_SESSION['user_id'];
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.php">
-                <img src="../Admin/assets/imgs/logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
+                <img src="logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
 
     <!--hamburger-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +55,7 @@ $user_id = $_SESSION['user_id'];
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="home.php">Home</a>
+                    <a class="nav-link" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="menu.php" class="nav-link">Menu</a>
@@ -62,6 +63,12 @@ $user_id = $_SESSION['user_id'];
                 <li class="nav-item">
                     <a class="nav-link" href="about.php">About</a>
                 </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="order_page.php" alt="">
+                            <span class="icon">
+                            <ion-icon name="receipt-outline"></ion-icon>
+                        </span></a>
+                    </li>
                 <li class="nav-item">
                     <a class="nav-link" href="cart.php" alt="">
                         <span class="icon">
@@ -103,7 +110,7 @@ $user_id = $_SESSION['user_id'];
                 <input type="number" min="1" value="<?php echo $fetch_cart['quantity']; ?>" name="cart_quantity" class="qty">
                 <input type="submit" value="update" class="option-btn" name="update_quantity">
                 <div class="more-btn">
-                <a href="cart.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled' ?>" onclick="return confirm('delete all from cart?');">delete all</a>
+                <a href="cart.php?delete_all" class="delete-btn <?php echo ($grand_total > 1)?'':'disabled' ?>" onclick="return confirm('Delete all from cart?');">delete all</a>
                 </div>
             </form>
             <p><div class="sub-total"> sub-total : <span>₱<?php echo $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>.00</span> </div></p>
@@ -123,6 +130,10 @@ $user_id = $_SESSION['user_id'];
         <p><a href="menu.php" class="option-btn">continue shopping</a></p>
     </div>
 </section>
+
+<footer>
+<?php @include 'footer.php'; ?>
+</footer>
 
 <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

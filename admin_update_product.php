@@ -21,16 +21,16 @@ $admin_id = $_SESSION['admin_id'];
       
    if(!empty($image)){
       if($image_size > 2000000){
-         $message[] = 'image file size is too large!';
+         echo "<script> alert('Image Size is too large!');</script>";
       }
       else{
          mysqli_query($conn, "UPDATE `products` SET image = '$image' WHERE id = '$update_p_id'") or die('query failed');
          move_uploaded_file($image_tmp_name, $image_folter);
          unlink('uploaded_img/'.$old_image);
-         $message[] = 'image updated successfully!';
+         echo "<script> alert('Image Updated Successfully!');</script>";
       }
    }
-   $message[] = 'product updated successfully!';
+   echo "<script> alert('Products Updated Successfully!');</script>";
    }
 ?>
 

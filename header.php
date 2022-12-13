@@ -14,7 +14,7 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="index.php">
-                    <img src="../Ester_Pansitan/logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
+                    <img src="logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
 
         <!--hamburger-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,6 +32,18 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order_page.php" alt="">
+                            <span class="icon">
+                            <ion-icon name="receipt-outline"></ion-icon>
+                        </span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.php" alt="">
+                            <span class="icon">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="logout.php" alt=""><span class="icon"><ion-icon name="log-out-outline"></ion-icon></span></a>

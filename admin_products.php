@@ -17,17 +17,17 @@ $admin_id = $_SESSION['admin_id'];
       $select_product_name = mysqli_query($conn, "SELECT name FROM `products` WHERE name = '$name'") or die('query failed');
 
       if(mysqli_num_rows($select_product_name) > 0){
-         $message[] = 'product name already exist!';
+         echo "<script> alert('Product name already exist!');</script>";
       }
       else{
       $insert_product = mysqli_query($conn, "INSERT INTO `products`(name, details, price, image) VALUES('$name', '$details', '$price', '$image')") or die('query failed');
       if($insert_product){
          if($image_size > 2000000){
-            $message[] = 'image size is too large!';
+            echo "<script> alert('Image Size is too large!');</script>";
          }
          else{
             move_uploaded_file($image_tmp_name, $image_folter);
-            $message[] = 'product added successfully!';
+            echo "<script> alert('Products added Successfully!');</script>";
          }
       }
    }

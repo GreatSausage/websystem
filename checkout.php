@@ -2,13 +2,13 @@
 @include 'config.php';
 session_start();
 $user_id = $_SESSION['user_id'];
+$name = $_SESSION['user_name'];
+$email = $_SESSION['user_email'];
 if(!isset($user_id)){
    header('location:login.php');
 };
 if(isset($_POST['order'])){
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
     $number = mysqli_real_escape_string($conn, $_POST['number']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
     $method = mysqli_real_escape_string($conn, $_POST['method']);
     $address = mysqli_real_escape_string($conn, $_POST['address']);
     $placed_on = date('d-M-Y');
@@ -30,13 +30,13 @@ if(isset($_POST['order'])){
     $order_query = mysqli_query($conn, "SELECT * FROM `orders` WHERE name = '$name' AND number = '$number' AND email = '$email' AND method = '$method' AND address = '$address' AND total_products = '$total_products' AND total_price = '$cart_total'") or die('query failed');
 
     if($cart_total == 0){
-        $message[] = 'your cart is empty!';
+        echo "<script> alert('Your Cart is Empty!');</script>";
     }elseif(mysqli_num_rows($order_query) > 0){
-        $message[] = 'order placed already!';
+        echo "<script> alert('Ordered Placed Already!');</script>";
     }else{
         mysqli_query($conn, "INSERT INTO `orders`(user_id, name, number, email, method, address, total_products, total_price, placed_on) VALUES('$user_id', '$name', '$number', '$email', '$method', '$address', '$total_products', '$cart_total', '$placed_on')") or die('query failed');
         mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
-        $message[] = 'order placed successfully!';
+        echo "<script> alert('Ordered Placed Successfully!');</script>";
         header('location:menu.php');
     }
 }
@@ -60,7 +60,7 @@ if(isset($_POST['order'])){
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="index.php">
-                    <img src="../Admin/assets/imgs/logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
+                    <img src="logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
 
         <!--hamburger-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,6 +78,12 @@ if(isset($_POST['order'])){
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order_page.php" alt="">
+                            <span class="icon">
+                            <ion-icon name="receipt-outline"></ion-icon>
+                        </span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cart.php" alt="">
@@ -99,11 +105,11 @@ if(isset($_POST['order'])){
         <form class="" action="" method="POST" autocomplete="off">
             <h2>Place your order</h2>
             <div class="underline"></div>
-            <div class="inputBox"> 
-                    <input type="text" name="name" id="name" required value=""> <span>Full Name</span> <i></i> 
+                <div class="inputBox"> 
+                <h6><input type="hidden" name="name" id="name" value=""><span><?php echo $_SESSION['user_name']; ?></span></h6>
                 </div> 
                 <div class="inputBox"> 
-                    <input type="text" name="email" id="email" required value=""> <span>Email Address</span> <i></i> 
+                    <h6><input type="hidden" name="email" id="email" value=""><span><?php echo $_SESSION['user_email']; ?></span></h6>
                 </div>
                 <div class="inputBox"> 
                     <input type="text" name="address" id="address" required value=""> <span>Address</span> <i></i> 
@@ -120,9 +126,9 @@ if(isset($_POST['order'])){
                 </div>
                 <button type="submit" name="order" class='submit-btn'>Order Now</button>
         </form>
-    </div>
     <!--main ends here-->
 
+   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

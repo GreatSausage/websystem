@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="footer.css?v=<?php echo time(); ?>">
     <title>Homepage - Garcia's Panciteria</title>
 </head>
 <body>
@@ -22,6 +23,8 @@
         </div>
             
     </main>
-
+    <footer>
+    <?php @include 'footer.php'; ?>
+    </footer>
 </body>
 </html>
