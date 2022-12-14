@@ -1,18 +1,21 @@
 <?php
-@include 'config.php';
-session_start();
-   if(isset($_POST['update_order'])){
-      $order_id = $_POST['order_id'];
-      $update_payment = $_POST['update_payment'];
-      mysqli_query($conn, "UPDATE `orders` SET payment_status = '$update_payment' WHERE id = '$order_id'") or die('query failed');
-      echo "<script> alert('Payment Status Updated!');</script>";
-   }
 
-   if(isset($_GET['delete'])){
-      $delete_id = $_GET['delete'];
-      mysqli_query($conn, "DELETE FROM `orders` WHERE id = '$delete_id'") or die('query failed');
-      header('location:admin_orders.php');
-   }
+@include 'config.php';
+
+session_start();
+
+if(isset($_POST['update_order'])){
+   $order_id = $_POST['order_id'];
+   $update_payment = $_POST['update_payment'];
+   mysqli_query($conn, "UPDATE `orders` SET payment_status = '$update_payment' WHERE id = '$order_id'") or die('query failed');
+   echo "<script> alert('Payment Status Updated!');</script>";
+}
+
+if(isset($_GET['delete'])){
+   $delete_id = $_GET['delete'];
+   mysqli_query($conn, "DELETE FROM `orders` WHERE id = '$delete_id'") or die('query failed');
+   header('location:admin_orders.php');
+}
 
 ?>
 
@@ -40,9 +43,9 @@ session_start();
       <div class="box">
          <p> user id : <span><?php echo $fetch_orders['user_id']; ?></span> </p>
          <p> placed on : <span><?php echo $fetch_orders['placed_on']; ?></span> </p>
-         <p> name : <span><?php echo $_SESSION['user_name']; ?></span> </p>
+         <p> name : <span><?php echo $fetch_orders['name']; ?></span> </p>
          <p> number : <span><?php echo $fetch_orders['number']; ?></span> </p>
-         <p> email : <span><?php echo $_SESSION['user_email']; ?></span> </p>
+         <p> email : <span class = "email"><?php echo $fetch_orders['email']; ?></span> </p>
          <p> address : <span><?php echo $fetch_orders['address']; ?></span> </p>
          <p> total price : <span>₱<?php echo $fetch_orders['total_price']; ?></span> </p>
          <p> total products : <span><?php echo $fetch_orders['total_products']; ?></span> </p>
@@ -65,8 +68,10 @@ session_start();
       }
       ?>
    </div>
+
 </section>
 
 <script src="js/admin_script.js"></script>
+
 </body>
 </html>

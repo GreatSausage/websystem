@@ -856,6 +856,9 @@ body {
   text-transform: capitalize;
   font-weight: bolder;
 }
+.placed-orders .box-container .box .email{
+  text-transform: none;
+}
 
 .placed-orders .box-container .box p span{
   color:var(--font-color-2);
