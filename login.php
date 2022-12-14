@@ -51,7 +51,7 @@
 <div class="container-fluid">
     <nav class="navbar navbar-expand-lg">
         <a class="navbar-brand" href="login.php">
-        <img src="logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
+        <img src="../project/image/logo.png" alt="">&nbsp&nbspGarcia's Panciteria</a>
         <!--hamburger-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

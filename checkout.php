@@ -121,7 +121,6 @@ if(isset($_POST['order'])){
                 <div class="inputBox">
                         <select name="method">
                             <option value="cash on delivery">Cash on delivery</option>
-                            <option value="Gcash">Gcash</option>
                         </select>
                 </div>
                 <button type="submit" name="order" class='submit-btn'>Order Now</button>
